@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailesInvoicesViewController" customModule="ViperShoping" customModuleProvider="target">
+            <connections>
+                <outlet property="DetailesInvoiceTableView" destination="xtY-8Y-8xd" id="bEQ-aj-bZR"/>
+                <outlet property="imageLogo" destination="bHm-II-0Ob" id="hFw-WI-5Ru"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GradiantColor" customModule="ViperShoping" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYY-SK-hcx" customClass="ViewLayer" customModule="ViperShoping" customModuleProvider="target">
+                    <rect key="frame" x="5" y="58.999999999999993" width="383" height="94.333333333333314"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtraction 25" translatesAutoresizingMaskIntoConstraints="NO" id="bHm-II-0Ob">
+                            <rect key="frame" x="119" y="12.666666666666671" width="145" height="66"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstItem="bHm-II-0Ob" firstAttribute="height" secondItem="pYY-SK-hcx" secondAttribute="height" multiplier="0.699634" id="2Fp-8z-jk3"/>
+                        <constraint firstItem="bHm-II-0Ob" firstAttribute="centerY" secondItem="pYY-SK-hcx" secondAttribute="centerY" id="C0O-la-h13"/>
+                        <constraint firstItem="bHm-II-0Ob" firstAttribute="width" secondItem="pYY-SK-hcx" secondAttribute="width" multiplier="0.378016" id="Xgp-2k-OtF"/>
+                        <constraint firstItem="bHm-II-0Ob" firstAttribute="top" secondItem="pYY-SK-hcx" secondAttribute="top" constant="12.67" id="dug-53-dZc"/>
+                        <constraint firstItem="bHm-II-0Ob" firstAttribute="centerX" secondItem="pYY-SK-hcx" secondAttribute="centerX" id="eiG-X7-Ra4"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xtY-8Y-8xd">
+                    <rect key="frame" x="20" y="183.33333333333334" width="353" height="510.33333333333326"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMI-yO-WHy" customClass="ButtonLayer" customModule="ViperShoping" customModuleProvider="target">
+                    <rect key="frame" x="20" y="733.66666666666663" width="353" height="51"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="exite"/>
+                    <connections>
+                        <action selector="exiteButton:" destination="-1" eventType="touchUpInside" id="Gb5-gZ-3Zy"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="xtY-8Y-8xd" firstAttribute="top" secondItem="pYY-SK-hcx" secondAttribute="bottom" constant="30" id="7Ok-XS-ESg"/>
+                <constraint firstItem="XMI-yO-WHy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BR8-jX-CoO"/>
+                <constraint firstAttribute="trailing" secondItem="pYY-SK-hcx" secondAttribute="trailing" constant="5" id="DTt-gv-ove"/>
+                <constraint firstItem="XMI-yO-WHy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="HTx-rV-UiJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XMI-yO-WHy" secondAttribute="trailing" constant="20" id="KSB-kX-U1L"/>
+                <constraint firstItem="xtY-8Y-8xd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Nby-gK-W30"/>
+                <constraint firstItem="pYY-SK-hcx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QtP-24-C7i"/>
+                <constraint firstItem="XMI-yO-WHy" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.06" id="Rqe-P5-1ss"/>
+                <constraint firstItem="pYY-SK-hcx" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="WAb-wk-cQ6"/>
+                <constraint firstItem="xtY-8Y-8xd" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.6" id="iEs-fx-j7J"/>
+                <constraint firstItem="pYY-SK-hcx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="kJa-IJ-s7n"/>
+                <constraint firstItem="XMI-yO-WHy" firstAttribute="top" secondItem="xtY-8Y-8xd" secondAttribute="bottom" constant="40" id="mrY-fG-6xY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xtY-8Y-8xd" secondAttribute="trailing" constant="20" id="pgR-cI-INW"/>
+            </constraints>
+            <point key="canvasLocation" x="23" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Subtraction 25" width="141" height="66"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseLoginViewController" customModule="ViperShoping" customModuleProvider="target">
+            <connections>
+                <outlet property="WelcomLbl" destination="OnD-2W-YiR" id="SMe-bv-O2W"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIG-5K-aLl">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtR-pJ-siS">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="ge5-8e-vDD">
+                                    <rect key="frame" x="20" y="40" width="353" height="699"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="bek-bb-gVr">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="336.66666666666669"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="751" image="logoLan" translatesAutoresizingMaskIntoConstraints="NO" id="CLe-Ph-cuQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="194"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleToFill" verticalHuggingPriority="251" image="backGround" translatesAutoresizingMaskIntoConstraints="NO" id="21L-dk-3j5">
+                                                    <rect key="frame" x="0.0" y="221.99999999999997" width="353" height="114.66666666666666"/>
+                                                </imageView>
+                                            </subviews>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JO5-qn-nbI">
+                                            <rect key="frame" x="0.0" y="427.66666666666663" width="353" height="271.33333333333337"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="XNb-Ic-ElV">
+                                                    <rect key="frame" x="5" y="5" width="343" height="41"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnD-2W-YiR">
+                                                            <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="FWv-sn-h8G"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Welcome"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Taghiz Store" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHL-q7-32O">
+                                                            <rect key="frame" x="0.0" y="23" width="343" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Taghiz_Store"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LU-P6-Zxx" customClass="ButtonLayer" customModule="ViperShoping" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="131.33333333333337" width="313" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="B25-uR-HBy"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Register"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Create_Account"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="createAccount:" destination="-1" eventType="touchUpInside" id="gr0-Rh-7jd"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SIj-Wd-Qn2" customClass="ButtonLayer" customModule="ViperShoping" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="201.33333333333337" width="313" height="50"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="fd3-VB-oOx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Sign_In">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="Sign_In"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="signIn:" destination="-1" eventType="touchUpInside" id="G73-ct-Uxv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="SIj-Wd-Qn2" firstAttribute="top" secondItem="1LU-P6-Zxx" secondAttribute="bottom" constant="20" id="DFj-xT-AZf"/>
+                                                <constraint firstItem="SIj-Wd-Qn2" firstAttribute="leading" secondItem="JO5-qn-nbI" secondAttribute="leading" constant="20" id="NsR-A5-h2D"/>
+                                                <constraint firstItem="XNb-Ic-ElV" firstAttribute="top" secondItem="JO5-qn-nbI" secondAttribute="top" constant="5" id="O96-eV-kAN"/>
+                                                <constraint firstAttribute="trailing" secondItem="SIj-Wd-Qn2" secondAttribute="trailing" constant="20" id="Vac-8t-wQo"/>
+                                                <constraint firstItem="1LU-P6-Zxx" firstAttribute="top" secondItem="XNb-Ic-ElV" secondAttribute="bottom" constant="85.329999999999998" id="Wt1-Nz-mDF"/>
+                                                <constraint firstAttribute="trailing" secondItem="1LU-P6-Zxx" secondAttribute="trailing" constant="20" id="Wt6-bT-GIS"/>
+                                                <constraint firstAttribute="bottom" secondItem="SIj-Wd-Qn2" secondAttribute="bottom" constant="20" id="de7-jq-BgG"/>
+                                                <constraint firstAttribute="trailing" secondItem="XNb-Ic-ElV" secondAttribute="trailing" constant="5" id="gwN-y8-9hb"/>
+                                                <constraint firstItem="XNb-Ic-ElV" firstAttribute="leading" secondItem="JO5-qn-nbI" secondAttribute="leading" constant="5" id="rGV-sD-RkJ"/>
+                                                <constraint firstItem="1LU-P6-Zxx" firstAttribute="leading" secondItem="JO5-qn-nbI" secondAttribute="leading" constant="20" id="y2B-hA-HKi"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ge5-8e-vDD" secondAttribute="bottom" constant="20" id="6LE-mo-KSa"/>
+                                <constraint firstItem="ge5-8e-vDD" firstAttribute="height" secondItem="VtR-pJ-siS" secondAttribute="height" multiplier="0.920949" id="9n3-MU-O1Z"/>
+                                <constraint firstItem="ge5-8e-vDD" firstAttribute="leading" secondItem="VtR-pJ-siS" secondAttribute="leading" constant="20" id="KR6-io-Fhe"/>
+                                <constraint firstItem="ge5-8e-vDD" firstAttribute="top" secondItem="VtR-pJ-siS" secondAttribute="top" constant="40" id="TOn-UI-CEs">
+                                    <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                </constraint>
+                                <constraint firstAttribute="trailing" secondItem="ge5-8e-vDD" secondAttribute="trailing" constant="20" id="t4z-1h-qEm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="VtR-pJ-siS" firstAttribute="leading" secondItem="TIG-5K-aLl" secondAttribute="leading" id="MTp-p8-zGQ"/>
+                        <constraint firstItem="VtR-pJ-siS" firstAttribute="width" secondItem="TIG-5K-aLl" secondAttribute="width" id="hBf-WE-gtk"/>
+                        <constraint firstAttribute="bottom" secondItem="VtR-pJ-siS" secondAttribute="bottom" id="kEr-8N-bqa"/>
+                        <constraint firstItem="VtR-pJ-siS" firstAttribute="top" secondItem="TIG-5K-aLl" secondAttribute="top" id="pQ6-Fn-kyH"/>
+                        <constraint firstAttribute="trailing" secondItem="VtR-pJ-siS" secondAttribute="trailing" id="wAY-Bk-bVr"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TIG-5K-aLl" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2SY-h6-tH2"/>
+                <constraint firstItem="TIG-5K-aLl" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="HDg-4m-hff"/>
+                <constraint firstItem="TIG-5K-aLl" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="mTy-wD-KhC"/>
+                <constraint firstItem="TIG-5K-aLl" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mWQ-Dl-5Bm"/>
+            </constraints>
+            <point key="canvasLocation" x="101.5267175572519" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backGround" width="426.66665649414062" height="114.66666412353516"/>
+        <image name="logoLan" width="194" height="194"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

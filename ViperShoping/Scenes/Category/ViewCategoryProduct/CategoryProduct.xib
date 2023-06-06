@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryProduct" customModule="ViperShoping" customModuleProvider="target">
+            <connections>
+                <outlet property="ProductCollection" destination="FJC-is-jgh" id="1fo-6j-hbh"/>
+                <outlet property="imageLogo" destination="XxO-TO-Du2" id="h5E-Co-0Q1"/>
+                <outlet property="slidMenuImage" destination="vPt-JJ-6YU" id="dVX-03-qWR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="GradiantColor" customModule="ViperShoping" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vo7-RP-HN2" customClass="ViewLayer" customModule="ViperShoping" customModuleProvider="target">
+                    <rect key="frame" x="5" y="59" width="383" height="91"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Subtraction 25" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-TO-Du2">
+                            <rect key="frame" x="122.66666666666667" y="12.666666666666671" width="137.66666666666663" height="66"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="terms_sidmenu" translatesAutoresizingMaskIntoConstraints="NO" id="vPt-JJ-6YU">
+                            <rect key="frame" x="20" y="21" width="49" height="49"/>
+                            <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vPt-JJ-6YU" secondAttribute="height" multiplier="1:1" id="XhI-xj-P3d"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                    <constraints>
+                        <constraint firstItem="vPt-JJ-6YU" firstAttribute="leading" secondItem="vo7-RP-HN2" secondAttribute="leading" constant="20" id="A9T-GU-HTd"/>
+                        <constraint firstItem="XxO-TO-Du2" firstAttribute="height" secondItem="vo7-RP-HN2" secondAttribute="height" multiplier="0.725275" id="Rca-zJ-9zi"/>
+                        <constraint firstItem="XxO-TO-Du2" firstAttribute="centerX" secondItem="vo7-RP-HN2" secondAttribute="centerX" id="Xby-Cy-6Gh"/>
+                        <constraint firstItem="XxO-TO-Du2" firstAttribute="centerY" secondItem="vo7-RP-HN2" secondAttribute="centerY" id="aCu-dH-OuY"/>
+                        <constraint firstItem="vPt-JJ-6YU" firstAttribute="centerY" secondItem="vo7-RP-HN2" secondAttribute="centerY" id="d7W-0H-AKz"/>
+                        <constraint firstItem="vPt-JJ-6YU" firstAttribute="height" secondItem="vo7-RP-HN2" secondAttribute="height" multiplier="0.538462" id="mIJ-oU-iei"/>
+                        <constraint firstItem="XxO-TO-Du2" firstAttribute="width" secondItem="vo7-RP-HN2" secondAttribute="width" multiplier="0.358779" id="qw4-0f-nMo"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FJC-is-jgh">
+                    <rect key="frame" x="20" y="170" width="353" height="628"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MLv-ve-PEW">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FJC-is-jgh" secondAttribute="trailing" constant="20" id="Chf-LZ-dYI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vo7-RP-HN2" secondAttribute="trailing" constant="5" id="D9H-Z0-hnr"/>
+                <constraint firstItem="vo7-RP-HN2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="S2S-Kn-lMK"/>
+                <constraint firstItem="vo7-RP-HN2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WsQ-lN-ivT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FJC-is-jgh" secondAttribute="bottom" constant="20" id="Z3m-Cl-Jc6"/>
+                <constraint firstItem="vo7-RP-HN2" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.12" id="bFb-nX-96F"/>
+                <constraint firstItem="FJC-is-jgh" firstAttribute="top" secondItem="vo7-RP-HN2" secondAttribute="bottom" constant="20" id="z6I-Ue-Otc"/>
+                <constraint firstItem="FJC-is-jgh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="z9e-lW-sw0"/>
+            </constraints>
+            <point key="canvasLocation" x="45" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Subtraction 25" width="141" height="66"/>
+        <image name="terms_sidmenu" width="36" height="36"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,90 @@
+/* 
+  Localizable.strings
+  ViperShoping
+
+  Created by Mahmoud on 17/10/2023.
+  
+*/
+
+
+"Select_Language" = "اختار اللغه";
+"Arabic_Language" = "اللغه العربيه" ;
+"English_Language" = "اللغه الانجليزيه" ;
+"Welcome" = "مرحبا";
+"Create_Account" = "حساب جديد";
+"Sign_In" = "دخول";
+"Taghiz_Store" = "متجر تجهيز";
+"Log_In_To_Your_Store" = "قم بتسجيل الدخول إلى متجرك";
+"Email" = "الايميل";
+"Password" = "باسورد";
+"enter_email" = "ادخل الايميل";
+"enterـPassword" = "ادخل الباسورد";
+"Frist_name" = "الاسم الاول";
+"Enter_Your_Frist_Name" = "ادخل الاسم الاول";
+"Last_name" = "الاسم الاخير";
+"Enter_Your_Last_Name" = "ادخل الاسم الاخير";
+"Enter_Your_Email" = "ادخل الايميل";
+"Enter_Your_Phone" = "ادخل رقم التلفون";
+"Phone" = "رقم التلفون";
+"Enter_Your_Password" = "ادخل الباسورد";
+"Enter_Confirm_Password" = "ادخل تاكيد كلمه المرور";
+"Confirm_Password" = "تاكيد كلمه المرور";
+"Save" = "حفظ";
+"Enter_your_personal_info" = "ادخل معلوماتك الشخصيه";
+"Country" = "البلد";
+"Governorate" = "اسم المحافظه";
+"locality" = "اسم المنطقه";
+"address" = "العنوان";
+"choose_image"  = "اختر الصوره" ;
+"source"  = "اختر الوصول الي الصور" ;
+"camera" = "كاميرا";
+"cancel" = "الغاء";
+"photo_gallery" = "معرض الصور";
+"name_Product" = "اسم المنتج";
+"Price" = "السعر";
+"Details" = "التفاصيل";
+"old_Price" = "السعر القديم";
+"discount" = "الخصم";
+"new_price" = "السعر الجديد";
+"total_price" = "السعر الاجمالي";
+"quantity" = "الكميه";
+"question" = "سوال";
+"answer" = "اجابه";
+"Search" = "بحث";
+"total_quantity" = "اجمالي الكميه : ";
+"Date" = "التاريخ :";
+"Informations" = "معلومات شخصيه ";
+"Personal_Information" = "المعلومات الشخصية";
+"Edit_Info" = "تعديل المعلومات";
+"Security_Information" = "معلومات أمنية";
+"Password" = "كلمة المرور";
+"Change_Password" = "تغيير كلمة المرور";
+"Address" = "العناون";
+"The_Address_is_your_primary_Address" = "العنوان هو عنوانك الأساسي";
+"get_address" = "الحصول على العنوان";
+"Account_Deletion" = "حذف حسابك الشخصي";
+"go" = "نحن حزينون لرؤيتك تذهب. ولكنني آمل أن نراك مرة أخرى!";
+"Delete_Your_Account " = "حذف حسابك";
+"about" = "عن الشركه";
+"terms" = "الشروط";
+"Category" = "الفئات";
+"Home" = "الصفحه الرئيسيه";
+"FAQS" = "لأسئلة الشائعة";
+"My_Account" = "حسابك الشخصي";
+"Favorite" = "المفضله";
+"Cart" = "العربه";
+"Terms" = "الشروط";
+"Current_Password" = "كلمة المرور الحالية";
+"Hold_up_this_field_is_required" = "انتظر، هذا الحقل مطلوب";
+"HoldUp6Character" = "انتظر، هذا الحقل يحتوي على 6 أحرف على الأقل";
+"Strong" = "قوي";
+"Good" = "جيد";
+"Average" = "متوسط";
+"Please_Enter_Current_Password" = "الرجاء إدخال كلمة المرور الحالية";
+"New_Password" =  "كلمة المرور الجديدة";
+"Please_Enter_New_Password" = "الرجاء إدخال كلمة المرور الجديده";
+"Weak" = "ضعيف" ;
+"CHANGE_PASSWORD" = "تغيير كلمة المرور";
+"back" = "رجوع";
+
+

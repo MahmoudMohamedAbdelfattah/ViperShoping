@@ -1,0 +1,62 @@
+//
+//  SubCategoryWireFrame.swift
+//  ViperShoping
+//
+//  Created by Mahmoud on 23/09/2023.
+//
+
+
+import UIKit
+
+
+class SubCategoryWireFrame : SubCategoryWireFrameProtocol {
+ 
+   // MARK: - Variables
+   var viewController: UIViewController?
+   
+   // MARK: - Functions
+   static func assembleModule(id:Int) -> UIViewController {
+       let view : SubCategoryViewController = SubCategoryViewController.loadFromNib()
+       let wireframe = SubCategoryWireFrame()
+       let interactor = SubCategoryInteractor()
+    
+       let dataMangerRemote = SubCategoryRemtoeDataManger()
+        let presenter = SubCategoryPresenter()
+       
+       view.presenter = presenter
+       presenter.view = view
+       presenter.interactor = interactor
+       presenter.wireframe = wireframe
+       interactor.outPut = presenter
+       
+       dataMangerRemote.remoteRequestHandler = interactor
+       interactor.remoteDataManager = dataMangerRemote
+       
+ 
+       presenter.routDataById(id: id)
+       wireframe.viewController = view
+       
+       return view
+   }
+   
+   func alerError(error: String) {
+//        DispatchQueue.main.async {
+//            UIApplication.shared.topViewController?.present(AlertWireFrame.assembleModule(messageError: error ), animated: true)
+//
+//        }
+   }
+       
+   func HideIndicatorAndShowAlertError(messageErore: String) {
+//        DispatchQueue.main.async {
+//            UIApplication.shared.topViewController?.dismiss(animated: true, completion: {
+//                self.alerError(error: messageErore)
+//            })
+//        }
+   }
+    
+    func dismissView() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
+    
+   
+}
