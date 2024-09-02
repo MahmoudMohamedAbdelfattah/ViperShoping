@@ -30,7 +30,7 @@ extension PersonalInformationViewPresenter :  PersonalInformationInteractorOutpu
     }
     
     func onError(message: String) {
-       
+        wireframe?.presentAlert(error: message)
     }
     
     func didSignInSucess(data: InformationPersonal) {

@@ -37,8 +37,7 @@ import CoreData
    protocol DetailsInvoiceInteractorOutputProtocol: AnyObject {
  // MARK: - Functions
          func usersFetchedSuccessfully(data: [CartProductEntity])
-        func usersFetchingFailed(withError error: String)
-   }
+    }
 
     protocol DetailsInvoiceWireFrameProtocol: AnyObject {
  // MARK: - Variables

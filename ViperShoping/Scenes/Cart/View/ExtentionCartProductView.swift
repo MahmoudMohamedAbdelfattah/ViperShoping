@@ -25,17 +25,13 @@ extension CartProductViewController : UITableViewDelegate , UITableViewDataSourc
         }
     
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-            if let productsSet = presenter?.CartProduct?[indexPath.row].products as? Set<CartProductEntity> {
+             if let productsSet = presenter?.CartProduct?[indexPath.row].products as? Set<CartProductEntity> {
                 for product in productsSet {
-               
-                    self.allData.append(product)
+                     self.allData.append(product)
                 }
             }
-     
-           self.presenter?.routeToView(view: DetailsInvoiceWireFrame.assembleModule(detailsInvoiceProduct: allData))
+            self.presenter?.routeToView(view: DetailsInvoiceWireFrame.assembleModule(detailsInvoiceProduct: allData))
             self.allData = []
-
-         }
+          }
  }
  

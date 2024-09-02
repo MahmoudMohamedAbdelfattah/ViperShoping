@@ -9,21 +9,12 @@ import CoreData
 import UIKit
 
 class DetailsInvoiceProductInteractor: DetailsInvoiceInteractorInputProtocol {
-  
-    
 
    // MARK: - Variables
        var outPut: DetailsInvoiceInteractorOutputProtocol?
      
    // MARK: - Functions
-
-    func getData(detailsInvoiceProduct: [CartProductEntity]) {
-        
-        print("IIIIII")
-        print(detailsInvoiceProduct)
-        outPut?.usersFetchedSuccessfully(data: detailsInvoiceProduct)
-        
-    }
-   
-   
-}
+     func getData(detailsInvoiceProduct: [CartProductEntity]) {
+         outPut?.usersFetchedSuccessfully(data: detailsInvoiceProduct)
+     }
+ }

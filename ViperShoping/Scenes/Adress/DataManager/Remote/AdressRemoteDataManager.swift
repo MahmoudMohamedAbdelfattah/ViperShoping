@@ -13,8 +13,7 @@ import UIKit
 class AdressRemoteDataManager : AdressRemoteDataManagerInputProtocol {
  
 // MARK: - Variables
-  //  var remoteRequestHandler: SignUpRemoteDataManagerOutputProtocol?
-    var remoteRequestHandler: AddressRemoteDataManagerOutputProtocol?
+     var remoteRequestHandler: AddressRemoteDataManagerOutputProtocol?
 
 // MARK: - Methode
     func SaveAddress(name: String, city: String, region: String, details: String, latitude: Double, longitude: Double, notes: String, Content_Type: String, lang: String, Authorization: String) {

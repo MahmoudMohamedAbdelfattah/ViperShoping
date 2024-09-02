@@ -19,7 +19,7 @@ class InternetWireFrame : InternetWireFrameProtocol{
         let view : DisconnectInternetViewController = DisconnectInternetViewController()
         let router = InternetWireFrame()
         let interactor = InternetInteractor()
-        let presenter = InternetPresenter(view: view, router: router, interactor: interactor)
+        let presenter = InternetPresenter()
         view.presenter = presenter
         presenter.view = view
         presenter.router = router

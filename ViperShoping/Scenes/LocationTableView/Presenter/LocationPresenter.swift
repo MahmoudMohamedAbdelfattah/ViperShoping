@@ -14,6 +14,4 @@ class LocationViewPresenter  : LocationPresenterProtocol {
 // MARK: - Variables
     weak var view: LocationViewProtocol?
     var wireframe: LocationWireFrameProtocol?
-    
- 
 }

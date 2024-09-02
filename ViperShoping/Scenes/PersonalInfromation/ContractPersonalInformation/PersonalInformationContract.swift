@@ -37,9 +37,9 @@ protocol PersonalInformationViewProtocol :AnyObject {
 
   protocol PersonalInformationInteractorOutputProtocol: AnyObject {
       // MARK: - Functions
-      func onError(message: String)
-      func didSignInSucess(data : InformationPersonal)
+       func didSignInSucess(data : InformationPersonal)
       func updateProfileSuccess()
+      func onError(message: String)
   }
 
    protocol PersonalInformationWireFrameProtocol: AnyObject {

@@ -19,32 +19,24 @@ class DetailsInvoiceProductPresenter : DetailsInvoicePresenterProtocol{
     var DetailsInvoice: [CartProductEntity] = []
  
     // MARK: - Methods
-     func viewDidLoad(detailsInvoiceProduct:[CartProductEntity]) {
-         print("pppppppp")
-         print(detailsInvoiceProduct)
-          interactor?.getData(detailsInvoiceProduct:detailsInvoiceProduct)
-       }
-    func routeToDismiss() {
-        wireframe?.dismissView()
-     }
-    func routeToHomeScreen() {
-        wireframe?.pushToHome()
-    }
- 
- }
+        func viewDidLoad(detailsInvoiceProduct:[CartProductEntity]) {
+  
+            interactor?.getData(detailsInvoiceProduct:detailsInvoiceProduct)
+        }
+        func routeToDismiss() {
+            wireframe?.dismissView()
+        }
+        func routeToHomeScreen() {
+            wireframe?.pushToHome()
+        }
+  }
  
 extension  DetailsInvoiceProductPresenter : DetailsInvoiceInteractorOutputProtocol {
 
   // MARK: - Methods
     func usersFetchedSuccessfully(data: [CartProductEntity]) {
-        self.DetailsInvoice = data
-       
-           self.view?.reloadView()
-          
-     }
-    
-    func usersFetchingFailed(withError error: String) {
-        
+            self.DetailsInvoice = data
+            self.view?.reloadView()
       }
 }
 

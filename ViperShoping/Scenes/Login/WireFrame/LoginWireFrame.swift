@@ -43,6 +43,7 @@ class LoginWireFrame : LoginWireFrameProtocol {
             RootManager.rootViewController(for: UIApplication.shared.mainWindow , with: nil, rootViewController: TabBarWireFrame.assembleModule())
         }
     }
+    
     func dismiss() {
         viewController?.navigationController?.popViewController(animated: true)
     }

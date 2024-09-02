@@ -17,7 +17,6 @@ class CellCategoryProduct: UICollectionViewCell {
   // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
  
     func configure(with model: DataInfo?) {

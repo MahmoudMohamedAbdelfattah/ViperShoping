@@ -14,12 +14,6 @@ class ChooseLoginPresenter : ChooseLoginPresenterProtocol {
     weak var view: ChooseLoginViewProtocol?
     var wireframe: ChooseLoginWireFrameProtocol?
     
- // MARK: - Initializers
-    init(view:ChooseLoginViewProtocol,wireframe:ChooseLoginWireFrameProtocol){
-        self.view = view
-        self.wireframe = wireframe
-    }
-    
  // MARK: - Functions
     func  routeTologinScreen() {
         wireframe?.presentToLogin()

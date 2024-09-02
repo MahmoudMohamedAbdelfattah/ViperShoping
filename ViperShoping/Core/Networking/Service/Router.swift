@@ -60,26 +60,28 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             case .request:
                 request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                 
-            case .requestParameters(let bodyParameters,let bodyEncoding,let urlParameters):
+            case .requestParameters(let bodyParameters,let bodyEncoding,let urlParameters, let id):
                 
                 try self.configureParameters(bodyParameters: bodyParameters,
                                              bodyEncoding: bodyEncoding,
-                                             urlParameters: urlParameters,
+                                             urlParameters: urlParameters, id: id,
                                              request: &request)
                 
                 
             case .requestParametersAndHeaders(let bodyParameters,
                                               let bodyEncoding,
                                               let urlParameters,
-                                              let additionalHeaders):
+                                              let additionalHeaders,let id):
                 
                 self.addAdditionalHeaders(additionalHeaders, request: &request)
                 
                 try self.configureParameters(bodyParameters: bodyParameters,
                                              bodyEncoding: bodyEncoding,
-                                             urlParameters: urlParameters,
+                                             urlParameters: urlParameters, id: id,
                                              request: &request)
-          
+           
+                
+                
             }
             return request
         } catch {
@@ -90,11 +92,11 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     
     fileprivate func configureParameters(bodyParameters: Parameters?,
                                          bodyEncoding: ParameterEncoding,
-                                         urlParameters: Parameters?,
+                                         urlParameters: Parameters?,id:Int?,
                                          request: inout URLRequest) throws {
         do {
             try bodyEncoding.encode(urlRequest: &request,
-                                    bodyParameters: bodyParameters, urlParameters: urlParameters)
+                                    bodyParameters: bodyParameters, urlParameters: urlParameters, id: id)
         } catch {
             throw error
         }

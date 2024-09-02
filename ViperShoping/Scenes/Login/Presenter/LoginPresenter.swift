@@ -4,14 +4,10 @@
 //
 //  Created by Mahmoud on 22/06/2023.
 //
-
-
-// asascamba061@gmail.com
-// 123!@#qwe
+ 
 import Foundation
 
-
-class LoginPresenter : LoginPresenterProtocol  {
+ class LoginPresenter : LoginPresenterProtocol  {
  
  // MARK: - Properties
         weak var view: LoginViewProtocol?

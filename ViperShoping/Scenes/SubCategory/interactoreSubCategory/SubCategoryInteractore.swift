@@ -9,7 +9,6 @@ import Foundation
 
 class SubCategoryInteractor : SubCategoryInteractorInputProtocol {
  
- 
 // MARK: - Variables
         var outPut: SubCategoryInteractorOutputProtocol?
         var remoteDataManager: SubCategoryViewRemoteDataManagerInputProtocol?
@@ -18,8 +17,7 @@ class SubCategoryInteractor : SubCategoryInteractorInputProtocol {
         func getData(id : Int) {
             remoteDataManager?.postIDProduct(id: id)
          }
- 
-   }
+    }
    
 extension  SubCategoryInteractor : SubCategoryViewRemoteDataManagerOutputProtocol {
  

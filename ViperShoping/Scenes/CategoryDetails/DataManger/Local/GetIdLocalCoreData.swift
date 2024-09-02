@@ -33,7 +33,6 @@ class CategoryDetailsLocaleDataManger : CategoryDetailsViewLocaleDataManagerInpu
         do {
           let result = try Context.fetch(fetchRequest) as! [NSManagedObject]
             localRequestHandler?.favoriteId(id:result.map{$0.value(forKey: "id") as! Int})
-            
          }
         catch {
          }
@@ -57,9 +56,7 @@ class CategoryDetailsLocaleDataManger : CategoryDetailsViewLocaleDataManagerInpu
             print("Failed to save invoice: \(error.localizedDescription)")
         }
     }
-    
- 
-    
+        
     func PostgetOrCreateInvoice(context: NSManagedObjectContext) -> Invoice {
         if let invoiceID = currentInvoiceID, let invoice = PostfetchInvoice(byID: invoiceID, context: context) {
             return invoice

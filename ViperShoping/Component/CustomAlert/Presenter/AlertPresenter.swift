@@ -8,26 +8,20 @@
 import Foundation
 
 class AlertPresenter : AlertPresenterProtocol {
-    func dismissView() {
-        router?.dissmiss()
-    }
-    
-   
+
  // MARK: - Variables
     weak  var view: AlertViewProtocol?
     var router: AlertWireFrameProtocol?
     var interactor: AlertInteractorInputProtocol?
     var message: String?
  
- // MARK: - Initializers
-        init(view:AlertViewProtocol , router:AlertWireFrameProtocol , interactor: AlertInteractorInputProtocol){
-            self.view = view
-            self.router = router
-            self.interactor = interactor
-        }
 // MARK: - Functions
       func didLoad() {
          interactor?.getData()
+    }
+    
+    func dismissView() {
+        router?.dissmiss()
     }
  }
  

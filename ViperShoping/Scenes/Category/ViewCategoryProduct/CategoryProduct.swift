@@ -21,18 +21,16 @@ class CategoryProduct: UIViewController , CategoryViewProtocol, UICollectionView
     }
 // MARK: - Properties
         var presenter: CategorytPresenterProtocol?
-
         override var preferredStatusBarStyle: UIStatusBarStyle {
             return .lightContent
-    }
+        }
 // MARK: - Methods
          override func viewDidLoad() {
             super.viewDidLoad()
              presenter?.viewDidLoad()
              uiTapGesture()
               ProductCollection.addViewBorder(borderColor: UIColor.orange.cgColor, borderWith: 3, borderCornerRadius: 10)
-             
-    }
+         }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

@@ -32,20 +32,15 @@ class CategoryDetailsPresenter : CategoryDeatailsPresenterProtocol{
         func favoriteIdCoreData() {
             interactor?.getIdFavorite()
          }
-    
-        func routeHideIndicatorAndShowAlert(eroorMessage:String) {
-            wireframe?.HideIndicatorAndShowAlertError(messageErore:eroorMessage)
-        }
-    
+ 
         func saveProduct(data: CategoryDataDetials,kind:CoreDataManager.entityNameCoreData) {
             interactor?.postSaveProductCoreData(data: data, type: kind)
         }
-//        func productCartCoreData() {
-//            interactor?.getProductCart()
-//        }
+ 
         func deleteIdProduct(id: Int, entityName: CoreDataManager.entityNameCoreData) {
             interactor?.deleteIdProduct(id:id,entityName:entityName)
         }
+    
         func routeToCartScreen() {
             wireframe?.presentToCart()
         }
@@ -70,21 +65,16 @@ class CategoryDetailsPresenter : CategoryDeatailsPresenterProtocol{
    }
  
 extension  CategoryDetailsPresenter : CategoryDeatailsInteractorOutputProtocol {
+  
     func getTotalQuntityAndPrice(totalQuntity: Int, totalPrice: Double) {
         view?.totalQuntityAndPrice(totalQuntity: totalQuntity, totalPrice: totalPrice)
     }
     
-    
-    
-
-    
-  
+   
     // MARK: - Methods
         func searchCompleted(data: CategoriesDeatial?) {
-            
-            self.searchProduct = data?.data?.data
-         
-             self.view?.reloadView()
+             self.searchProduct = data?.data?.data
+              self.view?.reloadView()
         }
     
         func getCartProduct(productCart: [CategoryDataDetials]) {
@@ -128,8 +118,8 @@ extension  CategoryDetailsPresenter : CategoryDeatailsInteractorOutputProtocol {
         }
     
         func usersFetchingFailed(withError message: String) {
-            view?.hideLoadingAndShowErrorMessage(error: message)
-        }
+            
+         }
     
         func getFavoriteId(favoriteId: [Int]?) {
             self.chooseFavoriteID = favoriteId

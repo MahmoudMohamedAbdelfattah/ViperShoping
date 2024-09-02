@@ -37,11 +37,10 @@ extension SlidMenuPresenter :SlidMenuInteractorOutputProtocol  {
  
         view?.updateProfileImage(image: self.personalInformation?.image ?? "", name: self.personalInformation?.name ?? "" )
         
-        view?.updateProfileImage(image: self.personalInformation?.image ?? "", name: self.personalInformation?.name ?? "")
+     //   view?.updateProfileImage(image: self.personalInformation?.image ?? "", name: self.personalInformation?.name ?? "")
     }
         func onError(message: String) {
-            view?.hideLoadingAndShowErrorMessage(error: message)
-        }
+         }
  }
 
  

@@ -33,25 +33,26 @@ class ChangePasswordViewController: UIViewController , ChangePasswordViewProtoco
     // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        newPasswordTxt.textContentType = .oneTimeCode
-        currentPasswordTxt.textContentType = .oneTimeCode
+ 
         currentPasswordTxt.becomeFirstResponder()
         newPasswordTxt.delegate = self
         currentPasswordTxt.delegate = self
         descriptionCurrentPasswordLbl.isHidden = true
         
-        _ = allStack.map{
-            $0.backgroundColor = .clear
-         }
+        setupBackGroundStack()
       }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        DispatchQueue.main.async {
-           Component.shared.basicAnimations(Image: self.imageLogo)
+            DispatchQueue.main.async {
+                Component.shared.basicAnimations(Image: self.imageLogo)
         }
     }
     
+    func setupBackGroundStack() {
+        _ = allStack.map{
+            $0.backgroundColor = .clear
+         }
+    }
     // MARK: - @IBAction
 
     @IBAction func changePassword(_ sender: Any) {

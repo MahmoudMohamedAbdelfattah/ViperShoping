@@ -22,6 +22,7 @@ class FavoriteProductPresenter : FavoritePresenterProtocol{
      func viewDidLoad() {
           interactor?.getData()
       }
+    
     func routeToDismiss() {
         wireframe?.dismissView()
      }
@@ -36,6 +37,5 @@ extension  FavoriteProductPresenter : FavoriteInteractorOutputProtocol {
         }
      }
     
-    func getFetchingFailed(withError error: String) {
-      }
+ 
 }

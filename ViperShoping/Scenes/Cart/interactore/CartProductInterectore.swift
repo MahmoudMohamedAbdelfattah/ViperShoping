@@ -18,8 +18,7 @@ class CartProductInteractor: CartInteractorInputProtocol {
 
     func getData() {
         guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else{return}
-        var cartProduct  = Invoices()
-         let  context = appdelegate.persistentContainer.viewContext
+        let  context = appdelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Invoice> = Invoice.fetchRequest()
         let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
           fetchRequest.sortDescriptors = [sortDescriptor]

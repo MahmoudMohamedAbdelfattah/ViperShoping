@@ -53,7 +53,6 @@ class CategoryDetailsCell: UITableViewCell{
     @objc func imageTappedFavorite() {
         let isSelectedFavorite = data?.isFavorite == true ? false : true
         delgate?.reloadFavoriteCell(cell: self, isFavorite: isSelectedFavorite, model: self.data ?? CategoryDataDetials())
- 
         }
  
     @objc func imageTappedCart() {
@@ -68,7 +67,6 @@ class CategoryDetailsCell: UITableViewCell{
             }
         else {
             delgate?.reloadCartQuntityCell(cell: self, quantity: self.quntity, model: self.data ?? CategoryDataDetials())
- 
              }
          }
     

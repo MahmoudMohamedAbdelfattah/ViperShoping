@@ -12,8 +12,7 @@ import UIKit
 // MARK: - Variables
         var presenter : SlidMenuPresenterProtocol? {get}
  // MARK: - Functions
-        func hideLoadingAndShowErrorMessage(error:String)
-      func updateProfileImage(image: String , name:String )
+       func updateProfileImage(image: String , name:String )
    }
 
  protocol SlidMenuPresenterProtocol : AnyObject{

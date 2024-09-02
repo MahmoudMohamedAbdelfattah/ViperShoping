@@ -16,12 +16,14 @@ public enum HTTPTask {
     
     case requestParameters(bodyParameters: Parameters?,
         bodyEncoding: ParameterEncoding,
-        urlParameters: Parameters?)
+                           urlParameters: Parameters?,id:Int?)
     
     case requestParametersAndHeaders(bodyParameters: Parameters?,
         bodyEncoding: ParameterEncoding,
         urlParameters: Parameters?,
-        additionHeaders: HTTPHeaders?)
+        additionHeaders: HTTPHeaders?,id:Int?)
+    
+     
     
     // case download, upload...etc
  }

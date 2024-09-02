@@ -28,7 +28,6 @@ extension CategoryProduct  {
      }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
-        self.presentToCategoryDetail(id: presenter?.allProductCategory?[indexPath.row].id ?? 0)
+         self.presentToCategoryDetail(id: presenter?.allProductCategory?[indexPath.row].id ?? 0)
        }
  }

@@ -51,7 +51,6 @@ class CategoryDetailsViewController: UIViewController , CategoryDetailsViewProto
                                  for: UIControl.Event.editingChanged)
     }
     
-    
     func setupBackgoundStack() {
         _ = stackDeatailsInvoice.map{$0.backgroundColor = .clear}
     }
@@ -72,17 +71,13 @@ class CategoryDetailsViewController: UIViewController , CategoryDetailsViewProto
         }
     }
   
-  
     func reloadView() {
         DispatchQueue.main.async {
             self.categoryDetailsTableView?.reloadData()
         }
     }
  
-    func hideLoadingAndShowErrorMessage(error:String) {
-                presenter?.routeHideIndicatorAndShowAlert(eroorMessage: error)
-        }
- 
+  
     func totalQuntityAndPrice(totalQuntity: Int?, totalPrice: Double?) {
         
          if totalQuntity == 0 {

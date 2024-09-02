@@ -40,8 +40,5 @@ extension  CartProductPresenter : CartInteractorOutputProtocol {
         }
            self.view?.reloadView()
      }
-    
-    func usersFetchingFailed(withError error: String) {
-      }
 }
 

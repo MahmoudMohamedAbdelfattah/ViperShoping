@@ -8,7 +8,8 @@
 import UIKit
 
 class SubCategoryViewController: UIViewController , SubCategoryViewProtocol {
-
+    
+    // MARK: - IBOutlets
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var mainStack: UIStackView!
@@ -23,17 +24,13 @@ class SubCategoryViewController: UIViewController , SubCategoryViewProtocol {
         }
     }
     
-    
+    // MARK: - Properties
+
     var presenter: SubCategoryPresenterProtocol?
     private var timer = Timer()
     private var counter = 0
-    
-    func hideLoadingAndShowErrorMessage(error: String) {
-        
-        
-     }
-    
-
+   
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         descriptionProduct.isEditable = false
@@ -73,11 +70,9 @@ class SubCategoryViewController: UIViewController , SubCategoryViewProtocol {
             if let  price = data.price {
                 self.priceProduct.text = "\(String(describing: price))"
             }
-      
-            self.descriptionProduct.text = data.description
-        print(data.description)
-        }
-    
+             self.descriptionProduct.text = data.description
+         }
+    // MARK: - @IBAction
     @IBAction func backViewButton(_ sender: UIButton) {
         presenter?.routeToDismiss()
     }

@@ -23,11 +23,8 @@ class AccountViewController: UIViewController , AccountViewProtocol {
         super.viewDidLoad()
 
         scrollView.addViewBorder(borderColor: UIColor.white.cgColor, borderWith: 2, borderCornerRadius: 20)
-        _ = allStack.map{(
-            $0.backgroundColor = .clear
-        )}
-        // Do any additional setup after loading the view.
-    }
+        setupBackGroundStack()
+     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -36,19 +33,25 @@ class AccountViewController: UIViewController , AccountViewProtocol {
         }
     }
 
+    func setupBackGroundStack() {
+        _ = allStack.map{(
+            $0.backgroundColor = .clear
+        )}
+    }
     // MARK: - Acition
      @IBAction func changePassword(_ sender: Any) {
- 
-        presenter?.routeToView(view: ChangePasswordWireFrame.assembleModule())
+         presenter?.routeToView(view: ChangePasswordWireFrame.assembleModule())
     }
     
     @IBAction func dimissView(_ sender: Any) {
         presenter?.routeToDismiss()
     }
+    
     @IBAction func editeInformation(_ sender: Any) {
         presenter?.routeToView(view: PersonalInformationWireFram.assembleModule())
         
     }
+    
     @IBAction func updateAddress(_ sender: Any) {
         presenter?.routeToView(view: UpdateAddressWireFram.assembleModule())
 

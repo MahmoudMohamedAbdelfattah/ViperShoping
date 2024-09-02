@@ -15,10 +15,5 @@ class TabBarPresenter  : TabBarPresenterProtocol {
     weak var view: TabBarViewProtocol?
     var wireframe: TabBarWireFrameProtocol?
  
-// MARK: - Initializers
-    init(view:TabBarViewProtocol,wireframe:TabBarWireFrameProtocol){
-        self.view = view
-        self.wireframe = wireframe
-      }
  }
  

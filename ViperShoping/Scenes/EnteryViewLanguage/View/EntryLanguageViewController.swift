@@ -24,9 +24,7 @@ class EntryLanguageViewController: UIViewController , EntryLanguageViewProtocol 
         super.viewDidLoad()
 
       }
-    
  // MARK: - Acition
-    
     @IBAction func englishButton(_ sender: UIButton) {
         presenter?.routeToAuthViewEnglish()
     }

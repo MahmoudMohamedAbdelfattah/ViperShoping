@@ -4,10 +4,7 @@
 //
 //  Created by Mahmoud on 02/10/2023.
 //
-
-import Foundation
-
-
+ 
 import UIKit
 import CoreData
 
@@ -22,24 +19,21 @@ import CoreData
          var wireframe : CartWireFrameProtocol? {get set}
          var interactor : CartInteractorInputProtocol?{get set}
          var CartProduct : [Invoice]? {get set}
- 
- // MARK: - Functions
+  // MARK: - Functions
          func viewDidLoad()
          func routeToDismiss()
-        func routeToView(view:UIViewController)
-
-  }
+         func routeToView(view:UIViewController)
+   }
     protocol CartInteractorInputProtocol : AnyObject {
 // MARK: - Variables
         var outPut: CartInteractorOutputProtocol? { get set }
 // MARK: - Functions
         func getData()
-}
+    }
    protocol CartInteractorOutputProtocol: AnyObject {
  // MARK: - Functions
          func usersFetchedSuccessfully(data: [Invoice]?)
-        func usersFetchingFailed(withError error: String)
-}
+   }
     protocol CartWireFrameProtocol: AnyObject {
  // MARK: - Variables
         var viewController : UIViewController?{get set}
@@ -47,4 +41,4 @@ import CoreData
         static func assembleModule() -> UIViewController
         func dismissView()
         func presentToView(view:UIViewController)
-}
+    }

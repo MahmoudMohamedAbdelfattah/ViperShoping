@@ -20,7 +20,7 @@ class Component {
     // MARK: - Give Date"
 
       func getCurrentShortDate() -> String {
-         var todaysDate = NSDate()
+        var todaysDate = NSDate()
         var dateFormatter = DateFormatter()
          dateFormatter.dateFormat = "dd-MM-yyyy"
         var DateInFormat = dateFormatter.string(from: todaysDate as Date)
@@ -58,12 +58,7 @@ class Component {
                gradient.add(animation, forKey: "shimmer")
     }
     
-//    func setupBorderLayer(view :UIView ) {
-//        view.layer.cornerRadius = 10
-//        view.layer.borderWidth = 3
-//        view.layer.borderColor = UIColor.orange.cgColor
-//        view.clipsToBounds = true
-//    }
+
     
     func getApiToken()-> String? {
           let def = UserDefaults.standard

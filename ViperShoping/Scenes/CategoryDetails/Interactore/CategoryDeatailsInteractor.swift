@@ -11,8 +11,6 @@ import UIKit
 class CategoryDeatailsInteractor : CategoryDetailsInteractorInputProtocol {
    
 
-    
-
     // MARK: - Variables
         var outPut: CategoryDeatailsInteractorOutputProtocol?
         var remoteDataManager: CategoryDetailsViewRemoteDataManagerInputProtocol?
@@ -30,11 +28,7 @@ class CategoryDeatailsInteractor : CategoryDetailsInteractorInputProtocol {
         func postSaveProductCoreData(data: CategoryDataDetials,type:CoreDataManager.entityNameCoreData){
             remoteDataManager?.postSaveProductCoreData(data: data, type: type)
         }
-    
-        func postCartData(data: CategoryDataDetials) {
-          //  remoteDataManager?.postCartCoreData(data: data)
-        }
-    
+     
         func getIdFavorite() {
             localDataManger?.favoriteIdCoreData()
         }
@@ -59,11 +53,9 @@ class CategoryDeatailsInteractor : CategoryDetailsInteractorInputProtocol {
         func clearCurrentInvoice() {
             localDataManger?.clearCurrentInvoice()
         }
-    
      }
    
 extension  CategoryDeatailsInteractor : CategoryDetailsViewRemoteDataManagerOutputProtocol , CategoryDetailsViewLocaleDataManagerOutputProtocol {
-    
 
     func deleteCurrentInvoice(context: NSManagedObjectContext) {
         context.performAndWait {
@@ -108,30 +100,24 @@ extension  CategoryDeatailsInteractor : CategoryDetailsViewRemoteDataManagerOutp
         } catch {
           }
     }
-    
-    
-    
+ 
     func sucessfullSearch(loginModel: CategoriesDeatial?) {
         outPut?.searchCompleted(data: loginModel)
-     
-    }
-    
-  
+         }
+ 
      func SuccessfullyCartProduct(data: [CategoryDataDetials]) {
-    
-             outPut?.getCartProduct(productCart: data )
-      }
+              outPut?.getCartProduct(productCart: data )
+        }
     
     func getDataSuccessfully(loginModel: CategoriesDeatial?) {
         outPut?.didLoginCompleted(data: loginModel)
-    }
+        }
   
     func getFetchingFailed(message: String) {
         outPut?.usersFetchingFailed(withError: message)
-    }
+        }
     
     func favoriteId(id: [Int]?) {
-       
-        outPut?.getFavoriteId(favoriteId: id)
-    }
+         outPut?.getFavoriteId(favoriteId: id)
+        }
 }

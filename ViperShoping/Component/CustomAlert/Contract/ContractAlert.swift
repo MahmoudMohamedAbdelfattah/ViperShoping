@@ -31,8 +31,6 @@ import UIKit
         var data: String { get }
 // MARK: - Method
         func getData()
- 
-        
 }
     protocol AlertInteractorOutputProtocol: AnyObject {
   // MARK: - Functions

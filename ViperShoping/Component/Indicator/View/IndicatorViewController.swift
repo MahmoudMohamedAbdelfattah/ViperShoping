@@ -9,14 +9,12 @@ import UIKit
 
 class IndicatorViewController: UIViewController  , IndicatorViewProtocol{
  
-// MARK: - Variables
-      var presenter: IndicatorPresenterProtocol?
-    
-        static var ss : IndicatorViewController = IndicatorViewController()
 
 // MARK: - IBOutlets
     @IBOutlet weak var indicator: UIActivityIndicatorView!
-    
+    // MARK: - Variables
+        var presenter: IndicatorPresenterProtocol?
+        static var ss : IndicatorViewController = IndicatorViewController()
 // MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()

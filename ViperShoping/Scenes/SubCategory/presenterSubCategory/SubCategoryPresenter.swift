@@ -15,24 +15,13 @@ class SubCategoryPresenter : SubCategoryPresenterProtocol{
        var wireframe: SubCategoryWireFrameProtocol?
        var interactor: SubCategoryInteractorInputProtocol?
        var allProductCategoryDetails: InfoSubCategory?
-    
-    // MARK: - Initializers
-//        init(view:CategoryDetailsViewProtocol,wireframe:CategoryDetailsWireFrameProtocol,interactor:CategoryDetailsInteractorInputProtocol){
-//        self.view = view
-//        self.wireframe = wireframe
-//        self.interactor = interactor
-//    }
-    
+ 
     // MARK: - Methods
   
        func routDataById(id:Int) {
             self.interactor?.getData(id:id)
         }
-  
-        func routeHideIndicatorAndShowAlert(eroorMessage:String) {
-            wireframe?.HideIndicatorAndShowAlertError(messageErore:eroorMessage)
-       }
-   
+ 
         func routeToDismiss() {
             wireframe?.dismissView()
         }
@@ -51,6 +40,6 @@ extension  SubCategoryPresenter : SubCategoryInteractorOutputProtocol {
     }
  
        func usersFetchingFailed(withError message: String) {
-           view?.hideLoadingAndShowErrorMessage(error: message)
-       }
+           print(message)
+        }
 }

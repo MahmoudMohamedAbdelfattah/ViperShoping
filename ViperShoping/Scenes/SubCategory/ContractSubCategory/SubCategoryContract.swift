@@ -12,10 +12,9 @@ protocol SubCategoryViewProtocol :AnyObject {
    // MARK: - Variables
          var presenter : SubCategoryPresenterProtocol? {get set}
    // MARK: - Functions
-         func reloadView()
+        func reloadView()
         func getData(data:InfoSubCategory)
-         func hideLoadingAndShowErrorMessage(error:String)
-}
+ }
 
 protocol  SubCategoryPresenterProtocol : AnyObject{
   // MARK: - Variables
@@ -27,8 +26,6 @@ protocol  SubCategoryPresenterProtocol : AnyObject{
   // MARK: - Functions
           func routDataById(id:Int)
           func routeToDismiss()
-          func routeHideIndicatorAndShowAlert(eroorMessage:String)
- 
 }
 
 protocol  SubCategoryInteractorInputProtocol : AnyObject {
@@ -65,10 +62,8 @@ protocol  SubCategoryWireFrameProtocol: AnyObject {
            var viewController : UIViewController?{get set}
    // MARK: - Functions
            static func assembleModule(id:Int) -> UIViewController
-           func alerError(error:String)
-            func dismissView()
-           func HideIndicatorAndShowAlertError(messageErore: String)
-   }
+             func dismissView()
+    }
 
  
 

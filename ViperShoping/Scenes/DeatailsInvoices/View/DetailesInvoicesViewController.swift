@@ -26,13 +26,10 @@ class DetailesInvoicesViewController: UIViewController , DetailsInvoiceProductVi
     override func viewDidLoad() {
         super.viewDidLoad()
         DetailesInvoiceTableView.addViewBorder(borderColor: UIColor.orange.cgColor, borderWith: 3, borderCornerRadius:  10)
-        
-   
      }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         DispatchQueue.main.async {
            Component.shared.basicAnimations(Image: self.imageLogo)
         }
@@ -47,8 +44,10 @@ class DetailesInvoicesViewController: UIViewController , DetailsInvoiceProductVi
     // MARK: - @IBAction
 
     @IBAction func dissmisButton(_ sender: Any) {
+        presenter?.routeToDismiss()
         
     }
+    
     @IBAction func exiteButton(_ sender: Any) {
         presenter?.routeToHomeScreen()
     }

@@ -30,8 +30,7 @@ class CategoryPresenter : CategorytPresenterProtocol{
      }
  
 extension  CategoryPresenter : CategoryInteractorOutputProtocol {
-    
-    // MARK: - Methods
+     // MARK: - Methods
         func getDataSuccessfully(data: CategoryModel?) {
                 self.allProductCategory = data?.data?.data
                 self.view?.reloadData()

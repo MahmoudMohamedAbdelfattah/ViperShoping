@@ -23,14 +23,12 @@ class AddressInteractor: AdressInteractorInputProtocol, LocationDelegate  {
     
     func userLocationUpdated(location: CLLocation) {
         outPut?.locationDataFetched(location: location )
-
-    }
+     }
     
     func SaveAddress(name: String, city: String, region: String, details: String, latitude: Double, longitude: Double, notes: String, Content_Type: String, lang: String, Authorization: String) {
         remoteDataManager?.SaveAddress(name: name, city: city, region: region, details: details, latitude: latitude, longitude: longitude, notes: notes, Content_Type: Content_Type, lang: lang, Authorization: Authorization)
     }
- 
-}
+ }
 
 
 extension AddressInteractor : AddressRemoteDataManagerOutputProtocol {

@@ -15,12 +15,11 @@ class ChooseLoginWireFrame : ChooseLoginWireFrameProtocol {
     weak var viewController: UIViewController?
     
  // MARK: - Functions
-    
     static func assembleModule() -> UIViewController {
         let view : ChooseLoginViewController = ChooseLoginViewController.loadFromNib()
         view.modalPresentationStyle = .fullScreen
         let wireframe = ChooseLoginWireFrame()
-        let presenter =  ChooseLoginPresenter(view: view, wireframe: wireframe)
+        let presenter =  ChooseLoginPresenter()
         view.presenter = presenter
         wireframe.viewController = view
         return view

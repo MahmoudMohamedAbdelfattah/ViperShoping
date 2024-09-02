@@ -12,11 +12,11 @@ extension DetailesInvoicesViewController : UITableViewDelegate , UITableViewData
     // MARK: - Methods
       func numberOfSectionsInTableView(tableView: UITableView) -> Int {
           return presenter?.DetailsInvoice.count ?? 0
-   }
+      }
    
        func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            return presenter?.DetailsInvoice.count ?? 0
-   }
+       }
  
        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
            return presenter?.DetailsInvoice.count ?? 0
@@ -26,7 +26,7 @@ extension DetailesInvoicesViewController : UITableViewDelegate , UITableViewData
            let cell = DetailesInvoiceTableView.dequeueReusableCell(withIdentifier:"DetailesInvoicesCell", for: indexPath) as! DetailesInvoicesCell
            cell.configure(with: presenter?.DetailsInvoice[indexPath.row])
             return cell
-       }
+        }
    
  
 }

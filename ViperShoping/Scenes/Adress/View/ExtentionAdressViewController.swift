@@ -11,9 +11,7 @@ import CoreLocation
 
 
 extension AdressViewController {
-    
- 
-     //
+
     func addNotation() {
         let pin = MKPointAnnotation()
         pin.coordinate = CLLocationCoordinate2D(latitude: 24.693719, longitude: 46.723596)
@@ -23,13 +21,10 @@ extension AdressViewController {
     }
     
     func locationFetched(location: CLLocation) {
-//        print("location")
-//        print(location)
         let coordinat = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let span = MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
         let region = MKCoordinateRegion(center: coordinat, span: span)
         mapView?.setRegion(region, animated: true)
-        
         getLocationInfo(location: location)
     }
     
@@ -42,7 +37,6 @@ extension AdressViewController {
     
         mapView.removeAnnotations(mapView.annotations)
 
-     //   preveseLocation = location
         gecoder.reverseGeocodeLocation(location) { places, error in
             
             guard let place = places?.first , error == nil else {return}
@@ -52,37 +46,18 @@ extension AdressViewController {
             if let addressDeatial = place.name {
                 self.adressDetals.text = addressDeatial
                 self.newPin.title = addressDeatial
-              //  annotation = locality
             }
-          //  self.adress.text = place.administrativeArea
-  //          print("place Name \(String(describing: place.name) )")
-           
-            //self.nameRegion.text = place.name
-           // self.city.text = place.locality
-  //          print("place Country \(String(describing: place.country))")
             self.nameCountry.text = place.country
-           // self.country.text = place.country
-  //         print("place Country Code \(String(describing: place.isoCountryCode))")
- //           print("place AdministrativeArea \(String(describing: place.administrativeArea))")
-           // self.nameGovernorate.text = String(describing:place.administrativeArea)
             if let administrativeArea = place.administrativeArea {
                 self.nameGovernorate.text = administrativeArea
             }
-  //          print("place locality \(String(describing: place.locality))")
-           // self.nameCity.text = (String(describing: place.locality))
-//            if let locality = place.locality  ?? "Unknown City"{
-//                self.newPin.title = locality
-//                self.nameCity.text = locality
-//             }
+
             self.nameCity.text = place.locality  ?? "Unknown City"
             if let city = place.name,
             let state = place.administrativeArea {
                 self.newPin.subtitle = "\(city) \(state)"
             }
             self.mapView.addAnnotation(self.newPin)
-            
-//            print("place Postal Code \(String(describing: place.postalCode))")
- //           print("Fristttttttttttttt")
             self.locationLatitude = location.coordinate.latitude
             self.locationLongitude = location.coordinate.longitude
      

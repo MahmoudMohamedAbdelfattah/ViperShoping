@@ -15,13 +15,7 @@ class InternetPresenter : InternetPresenterProtocol {
     var router: InternetWireFrameProtocol?
     var interactor: InternetInteractorInputProtocol?
     var message: String?
- 
- // MARK: - Initializers
-        init(view:InternetViewProtocol , router:InternetWireFrameProtocol , interactor: InternetInteractorInputProtocol){
-            self.view = view
-            self.router = router
-            self.interactor = interactor
-        }
+
 // MARK: - Functions
       func didLoad() {
          interactor?.getData()

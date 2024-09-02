@@ -18,8 +18,7 @@ class CartProductViewController: UIViewController , CartProductViewProtocol {
             cartTable.register(UINib(nibName: "CartCell", bundle: nil), forCellReuseIdentifier: "CartCell")
     }
 }
-    
-    // MARK: - Properties
+     // MARK: - Properties
     var presenter: CartPresenterProtocol?
     var data = CartProductEntity()
     var allData = [CartProductEntity]()
@@ -41,8 +40,7 @@ class CartProductViewController: UIViewController , CartProductViewProtocol {
     func reloadView() {
           self.cartTable.reloadData()
     }
- 
-    // MARK: - @IBAction
+     // MARK: - @IBAction
     @IBAction func dismissView(_ sender: UIButton) {
         presenter?.routeToDismiss()
     }

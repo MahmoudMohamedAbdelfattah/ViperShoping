@@ -56,8 +56,8 @@ extension NetworkEnvironment : EndPointType {
         case .profile:
             return "\(UrlApi.GetInfo)"
  
-        case .subCategory(id: let id ):
-            return "\(UrlApi.categoryDetails)/\(id)"
+        case .subCategory:
+            return "\(UrlApi.categoryDetails)"
             
         case .search:
             return "\(UrlApi.search)"
@@ -113,47 +113,47 @@ extension NetworkEnvironment : EndPointType {
         switch self {
         case .login(let email , let password,let lang,let Content_Type):
 
-            return .requestParametersAndHeaders(bodyParameters: ["email":email ,"password":password], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang ])
+            return .requestParametersAndHeaders(bodyParameters: ["email":email ,"password":password], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang ], id: nil)
             
         case.regestration(let name, let email,let password, let phone , let image , let lang  , let Content_Type ) :
-            return .requestParametersAndHeaders(bodyParameters: ["name":name ,"email":email,"password":password,"phone":phone , "image":image], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang ])
+            return .requestParametersAndHeaders(bodyParameters: ["name":name ,"email":email,"password":password,"phone":phone , "image":image], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang ], id: nil)
             
         case .Home (let  Content_Type , let lang  , let Authorization):
-            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ])
+            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ], id: nil)
             
         case .category (let lang):
-            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: [ "lang":lang])
+            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: [ "lang":lang], id: nil)
             
         case .categoryDetails(let category_id, let  Content_Type , let lang  , let Authorization):
-            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: ["category_id":category_id], additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: ["category_id":category_id], additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ], id: nil)
         case .faqs (let lang):
-            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: [ "lang":lang])
+            return.requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: [ "lang":lang], id: nil)
  
         case .profile( let Content_Type,  let lang , let Authorization):
-            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ], id: nil)
          
         case .subCategory (let id , let Content_Type,let lang ,let Authorization ):
-            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlappendpath, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ], id: id)
         case .search( let text, let Content_Type, let lang, let Authorization):
-            return .requestParametersAndHeaders(bodyParameters: ["text":text], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: ["text":text], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type":Content_Type , "lang":lang , "Authorization":Authorization ], id: nil)
             
         case .address(name: let name, city: let city, region: let region, details: let details, latitude: let latitude, longitude: let longitude, notes: let notes , Content_Type : let Content_Type , lang : let lang , Authorization : let Authorization):
                         
-            return .requestParametersAndHeaders(bodyParameters: ["name":name ,"city":city,"region":region,"details":details , "latitude":latitude,"longitude":longitude,"notes":notes], bodyEncoding:.jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: ["name":name ,"city":city,"region":region,"details":details , "latitude":latitude,"longitude":longitude,"notes":notes], bodyEncoding:.jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ], id: nil)
             
         case .changePassword(current_password: let current_password, new_password: let new_password, Content_Type: let Content_Type, lang: let lang, Authorization: let Authorization):
             
-            return .requestParametersAndHeaders(bodyParameters: ["current_password":current_password ,"new_password":new_password ], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: ["current_password":current_password ,"new_password":new_password ], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ], id: nil)
             
         case .updateProfile(name: let name, phone: let phone, email: let email, image: let image, Content_Type: let Content_Type, lang: let lang, Authorization: let Authorization):
             
-            return .requestParametersAndHeaders(bodyParameters: ["name":name,"phone":phone,"email":email,"image":image], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: ["name":name,"phone":phone,"email":email,"image":image], bodyEncoding: .jsonEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ], id: nil)
             
         case .getAddresses(Content_Type: let Content_Type, lang: let lang, Authorization: let Authorization):
-            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ])
+            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["Content-Type" : Content_Type , "lang":lang , "Authorization" : Authorization ], id: nil)
             
         case .terms(lang: let lang):
-            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["lang":lang])
+            return .requestParametersAndHeaders(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: nil, additionHeaders: ["lang":lang], id: nil)
 
         }
     }

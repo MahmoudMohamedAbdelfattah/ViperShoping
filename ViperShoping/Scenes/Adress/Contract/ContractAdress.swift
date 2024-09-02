@@ -16,9 +16,7 @@ protocol AdressViewProtocol :AnyObject {
     var resultSearchController:UISearchController? { get }
     // MARK: - Functions
     func locationFetched(location: CLLocation)
-   
-
-}
+ }
 protocol AdressPresenterProtocol : AnyObject{
     
 // MARK: - Variables
@@ -44,13 +42,11 @@ protocol AdressInteractorInputProtocol : AnyObject {
 protocol AdressRemoteDataManagerInputProtocol {
     
     var remoteRequestHandler: AddressRemoteDataManagerOutputProtocol? { get set }
-
-    func SaveAddress(name : String , city:String , region:String , details : String ,latitude: Double , longitude:Double , notes: String ,Content_Type : String , lang : String , Authorization : String )
+     func SaveAddress(name : String , city:String , region:String , details : String ,latitude: Double , longitude:Double , notes: String ,Content_Type : String , lang : String , Authorization : String )
 }
 
 protocol AddressRemoteDataManagerOutputProtocol: AnyObject{
          // MARK: - Functions
-            //RemoteDataManager -> Intractor
         func onSucessfulSignUp(data: AddresModel?)
         func messageError(message: String)
 }
@@ -70,7 +66,6 @@ protocol AdressWireFrameProtocol: AnyObject {
    var viewController : UIViewController?{get set}
 // MARK: - Functions
  
-    //static func assembleModule() -> UIViewController
     static func assembleModule() -> UIViewController 
     func  pushToHome()
     func presentAlert(error: String)

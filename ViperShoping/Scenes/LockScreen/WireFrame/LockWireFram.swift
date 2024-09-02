@@ -20,11 +20,9 @@ class LockWireFrame : LockWireFrameProtocol  {
         let interactor = LockInteractor()
         let presenter =  LockViewPresenter()
         view.presenter = presenter
-        
         presenter.view = view
         presenter.interactor = interactor
         presenter.wireframe = wireframe
-        
         interactor.outPut = presenter 
         wireframe.viewController = view
         return view

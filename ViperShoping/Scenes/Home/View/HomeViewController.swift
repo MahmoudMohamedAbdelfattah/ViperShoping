@@ -90,8 +90,7 @@ class HomeViewController: UIViewController , HomeViewProtocol {
     }
     
     @objc func imageTappedDecrese() {
- 
-        presenter?.routeToView(view: SlidMenuWireFrame.assembleModule(token: Component.shared.getApiToken() ?? ""))
+         presenter?.routeToView(view: SlidMenuWireFrame.assembleModule(token: Component.shared.getApiToken() ?? ""))
                }
          }
  
@@ -101,11 +100,13 @@ extension HomeViewController : UITableViewDelegate , UITableViewDataSource {
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
              return presenter?.allProductHome?.count ?? 0
      }
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = productHomeTableView.dequeueReusableCell(withIdentifier:"ProductHomeCell", for: indexPath) as! ProductHomeCell
             cell.configure(with:presenter?.allProductHome?[indexPath.row])
             return cell
     }
+    
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 400
     }

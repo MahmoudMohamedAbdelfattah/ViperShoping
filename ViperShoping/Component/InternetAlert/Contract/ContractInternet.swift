@@ -29,8 +29,7 @@ protocol InternetPresenterProtocol :AnyObject{
      protocol InternetInteractorInputProtocol : AnyObject {
 // MARK: - Variables
         var output: InternetInteractorOutputProtocol? { get set }
-     //   var data: String { get }
-// MARK: - Method
+ // MARK: - Method
         func getData()
  
         

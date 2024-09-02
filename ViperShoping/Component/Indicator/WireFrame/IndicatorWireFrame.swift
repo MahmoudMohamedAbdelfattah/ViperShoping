@@ -16,14 +16,12 @@ class IndicatorWireFrame : IndicatorWireFrameProtocol{
     static func assembleModule() -> UIViewController {
         let view : IndicatorViewController = IndicatorViewController()
         let router = IndicatorWireFrame()
-        let presenter = IndicatorPresenter(view: view, router: router)
+        let presenter = IndicatorPresenter()
         view.presenter = presenter
         presenter.view = view
         presenter.router = router
         router.viewController = view
          return view
     }
-//    func dismiss() {
-//        self.viewController?.dismiss(animated: true)
-//    }
+
  }

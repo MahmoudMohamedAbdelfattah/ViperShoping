@@ -28,7 +28,9 @@ class PersonalInformationWireFram :  PersonalInformationWireFrameProtocol {
     }
     
     func presentAlert(error: String) {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+           self.viewController?.present(AlertWireFrame.assembleModule(messageError: error ), animated: true)
+       }
     }
     
     func dismiss() {

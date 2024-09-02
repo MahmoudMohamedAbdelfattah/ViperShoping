@@ -35,8 +35,7 @@ import UIKit
    protocol FavoriteInteractorOutputProtocol: AnyObject {
  // MARK: - Functions
         func getDataSuccessfully(data: [CategoryDataDetials]?)
-        func getFetchingFailed(withError error: String)
-}
+ }
     protocol FavoriteWireFrameProtocol: AnyObject {
  // MARK: - Variables
         var viewController : UIViewController?{get set}

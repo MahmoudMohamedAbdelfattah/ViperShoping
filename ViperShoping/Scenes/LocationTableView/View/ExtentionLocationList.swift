@@ -40,25 +40,6 @@ extension LocationListViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let mapView = mapView,
             let searchBarText = searchController.searchBar.text else { return }
-        ////
-      
-//        let searchRequest = MKLocalSearch.Request()
-//        searchRequest.naturalLanguageQuery = searchBarText
-//        let activitySearch = MKLocalSearch(request: searchRequest)
-//        activitySearch.start { response , errore in
-//            let latitude =  response?.boundingRegion.center.latitude
-//            let longitude  =  response?.boundingRegion.center.longitude
-//            let cooredante = CLLocationCoordinate2D(latitude: latitude ?? 0.0, longitude: longitude ?? 0.0)
-//            let spane = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//            let region  = MKCoordinateRegion(center: cooredante, span: spane)
-//            self.mapView?.setRegion(region, animated: true)
-//            self.matchingItems = response?.mapItems ?? [MKMapItem]()
-//        }
-//        DispatchQueue.main.async {
-//                self.tableView.reloadData()
-//           }
-        
-        //
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = searchBarText
         request.region = mapView.region

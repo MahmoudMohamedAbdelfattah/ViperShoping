@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .orange
 
-    deleteAllEntities()
+  //  deleteAllEntities()
     //    NetworkMonitor.shared.internetStatus()
    //     UIApplication.getTopMostViewControllerr()?.present(LockWireFrame.assembleModule(), animated: true)
 

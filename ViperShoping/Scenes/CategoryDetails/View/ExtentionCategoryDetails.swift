@@ -29,8 +29,7 @@ extension CategoryDetailsViewController : UITableViewDelegate , UITableViewDataS
 
             } else {
                 cell.configure(NameModule:(presenter?.allProductCategoryDetails?[indexPath.row]) ?? CategoryDataDetials())
-
-            }
+             }
             cell.delgate = self
               return cell
         }
@@ -60,45 +59,12 @@ extension CategoryDetailsViewController :ProductTableViewDelgate  {
         let context = appDelegate.persistentContainer.viewContext
         if quantity ?? 0 > 0 {
             presenter?.allProductCategoryDetails?[index.row].quantity = quantity
-            
-         //   CoreDataManager.sharedInstance.updateProductQuantity(invoiceId: invoiceId, productId: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), newQuantity: presenter?.allProductCategoryDetails?[index.row].quantity ?? 0)
-   
-     
-          //  invoiceManager.updateProductQuantity(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), newQuantity: presenter?.allProductCategoryDetails?[index.row].quantity ?? 0, context: AppDelegate.shared.persistentContainer.viewContext)
-                  ///
-            ///
-            ///
-            ////////////////////////////// Test //////////////////////////////
-
             presenter?.PostupdateProductQuantityFromInvoice(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), newQuantity: Int(Int64(Int32(presenter?.allProductCategoryDetails?[index.row].quantity ?? 0))), context: AppDelegate.shared.persistentContainer.viewContext)
-            
-            ////////////////////////////// Test //////////////////////////////
-                //?????????????
-       //     invoiceManager.updateProductQuantity(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), newQuantity: Int(Int64(Int32(presenter?.allProductCategoryDetails?[index.row].quantity ?? 0))), context: AppDelegate.shared.persistentContainer.viewContext)
-            
-            
-            
-         //   invoiceManager.updateProductQuantity(invoiceID: currentInvoiceID  ,productID: presenter?.allProductCategoryDetails?[index.row].id ?? 0, quantityChange: Int64(Int32(presenter?.allProductCategoryDetails?[index.row].quantity ?? 0)), context: context)
-         //   CoreDataManager.sharedInstance.updata(id: presenter?.allProductCategoryDetails?[index.row].id ?? 0, quntity:  presenter?.allProductCategoryDetails?[index.row].quantity ?? 0)
-          } else {
-            // presenter?.deleteIdProduct(id:presenter?.allProductCategoryDetails?[index.row].id ?? 0, entityName: .cart)
-              
-              ////////////////////////////// Test //////////////////////////////
-              
-              
-              presenter?.deletIdProductFromInvoice(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
-              
-              
-              
-              
-              //////////////////////////////Test////////////////
-              
-              //??????????????????????
-          //    invoiceManager.deletProduct(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
-          }
+           } else {
+               presenter?.deletIdProductFromInvoice(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
+           }
             self.categoryDetailsTableView.reloadRows(at: [index], with: .automatic)
-         //   presenter?.productCartCoreData()
-    }
+     }
     
  
  
@@ -110,51 +76,11 @@ extension CategoryDetailsViewController :ProductTableViewDelgate  {
    
              if isCart == true {
                 self.viewCart.isHidden = false
-                //     ss.append(model)
-           //     CoreDataManager.sharedInstance.saveInvoice(id: invoiceId, date: invoiceDate, products: model )
-           
-             //   CoreDataManager.sharedInstance.saveOrUpdateInvoice(id: invoiceId, date: invoiceDate, products: presenter?.allProductCategoryDetails ?? [CategoryDataDetials]())
-//                if let a = presenter?.allProductCategoryDetails {
-//                      
-//               
-//                }
-                 //??????????????????????
-         //        invoiceManager.saveProducts(product:presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials(), context: AppDelegate.shared.persistentContainer.viewContext)
-                 
-                 
-                 ////////////////////////////// Test //////////////////////////////
-                 
-                 
-                 presenter?.saveInvoiceCoreData(product: presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials(), context: AppDelegate.shared.persistentContainer.viewContext)
-                 
-                 
-                 
-                 
-                 //////////////////////////////Test////////////////
-               
-                // invoiceManager.addOrUpdateProduct(productData: presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials() , context: AppDelegate.shared.persistentContainer.viewContext)
-               //  CoreDataManager.sharedInstance.saveOrUpdateInvoice(id: invoiceId, date: invoiceDate, products: presenter?.allProductCategoryDetails ?? [CategoryDataDetials]())
-                // CoreDataManager.sharedInstance.saveInvoice(id: invoiceId, date: invoiceDate, products: presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials() )
-                
-             //   self.presenter?.saveProduct(data: presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials(),kind: CoreDataManager.entityNameCoreData.cart)
+                  presenter?.saveInvoiceCoreData(product: presenter?.allProductCategoryDetails?[index.row] ?? CategoryDataDetials(), context: AppDelegate.shared.persistentContainer.viewContext)
  
                   } else {
-                      // presenter?.deleteIdProduct(id:presenter?.allProductCategoryDetails?[index.row].id ?? 0, entityName: .cart)
-                      
-                      ////////////////////////////// Test //////////////////////////////
-                      
-                      
-                      presenter?.deletIdProductFromInvoice(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
-                      
-                      
-                      
-                      
-                      //////////////////////////////Test////////////////
-                      
-                      //??????????????????????
-                          //  invoiceManager.deletProduct(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
-                  }
-           //     presenter?.productCartCoreData()
+                       presenter?.deletIdProductFromInvoice(productID: Int64(presenter?.allProductCategoryDetails?[index.row].id ?? 0), context: AppDelegate.shared.persistentContainer.viewContext)
+                   }
          }
 
     func reloadFavoriteCell(cell: UITableViewCell, isFavorite: Bool?,model: CategoryDataDetials?){

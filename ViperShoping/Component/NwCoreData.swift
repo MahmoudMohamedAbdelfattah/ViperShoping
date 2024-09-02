@@ -80,13 +80,6 @@ class InvoiceManager {
         entity.quntity = Int64(product.quantity ?? 0 )
             entity.image = product.image
         entity.invoice = invoice
-        //    totalPrice += (product.price ?? 0.0) * Double(product.quantity ?? 0)
-      //  totalQuantity += product.quantity ?? 0
-      
-        
-     //   invoice.totalPrice = totalPrice
-      //  invoice.totalQuantity = Int32(totalQuantity)
-        
     
             try context.save()
             updateInvoiceTotal(context: context)
@@ -114,33 +107,10 @@ class InvoiceManager {
                         $0.setValue(newQuantity, forKey: "quntity")
                     }
                 }
-             
-                    for product in results {
-                         // طباعة تفاصيل المنتج
-                  //      print("ID: \(product.id), Name: \(product.name ?? "غير محدد"), Quantity: \(product.quntity), Price: \(product.price)")
-                    }
-               
-                     
-//                if let product = results.last {
-//                    
-//                    // Update product quantity and recalculate totals
-//                    let oldQuantity = product.quntity
-//                    product.quntity = Int64(newQuantity)
-//                     let pricePerUnit = product.price
-//                    let oldTotal = Double(oldQuantity) * pricePerUnit
-//                    let newTotal = Double(newQuantity) * pricePerUnit
-//                    let invoiceTotalChange = newTotal - oldTotal
-//                    
-//                    // Update invoice total price and quantity
-//                    invoice.totalPrice += invoiceTotalChange
-//                    invoice.totalQuantity += (Int32(newQuantity) - Int32(oldQuantity))
-//                
-                    try context.save()
+    
+                try context.save()
                 updateInvoiceTotal(context: context)
-//                    print("Product quantity updated successfully")
-//                } else {
-                   // print("Product not found")
-              //  }
+
             } catch {
                 NSLog("Failed to update product quantity: \(error.localizedDescription)")
             }
@@ -173,34 +143,6 @@ class InvoiceManager {
             }
         }
     }
-
-    // افترض أن لديك كيانات باسم Product و Invoice
-
-//    func addOrUpdateProduct(productData: CategoryDataDetials, context: NSManagedObjectContext) {
-//        let invoice = getOrCreateInvoice(context: context)
-//        
-//        // إعداد طلب البحث للتحقق من وجود المنتج
-//        let fetchRequest: NSFetchRequest<CartProductEntity> = CartProductEntity.fetchRequest()  // تحديد النوع بشكل صحيح
-//        fetchRequest.predicate = NSPredicate(format: "id == %d AND invoice == %@", Int64(productData.id ?? 0), invoice)
-//        
-//        do {
-//            let existingProducts = try context.fetch(fetchRequest)
-//            
-//            if let existingProduct = existingProducts.first {
-//                // تحديث الكمية للمنتج الموجود بالفعل
-//                existingProduct.setValue(existingProduct.quntity + Int64(productData.quantity ?? 0), forKey: "quantity")
-//                existingProduct.setValue(productData.price ?? 0.0, forKey: "price")
-//            } 
-//            
-//            // تحديث إجمالي الفاتورة
-//            updateInvoiceTotal(context: context)
-//            
-//            try context.save()
-//            print("تم حفظ المنتج بنجاح")
-//        } catch {
-//            print("فشل في إضافة أو تحديث المنتج: \(error.localizedDescription)")
-//        }
-//    }
 
     func updateInvoiceTotal(context: NSManagedObjectContext) {
         let invoice = getOrCreateInvoice(context: context)
@@ -254,67 +196,4 @@ class InvoiceManager {
             }
         }
     }
-
-
 }
- 
-
-//func updateProductQuantity(productId: Int64, newQuantity: Int, context: NSManagedObjectContext) {
-//    guard let invoiceID = currentInvoiceID,
-//          let invoice = fetchInvoice(byID: invoiceID, context: context) else {
-//        print("لا توجد فاتورة مفتوحة.")
-//        return
-//    }
-//       let fetchRequest: NSFetchRequest<CartProductEntity> = CartProductEntity.fetchRequest()
-//       fetchRequest.predicate = NSPredicate(format: "id == %d AND invoice.id == %@", productId, invoice.id!)
-//       
-//       do {
-//           let results = try context.fetch(fetchRequest)
-//           if let product = results.last {
-//               // Update the product quantity
-//               let oldQuantity = Int(product.quntity)
-//               let price = product.price ?? 0.0
-//               
-//               product.quntity = Int64(newQuantity)
-//               
-//               // Update invoice totals based on all products
-//               updateInvoiceTotals(invoice: invoice, context: context)
-//               
-//               try context.save()
-//               print("Product quantity and invoice totals updated successfully")
-//           } else {
-//               print("Product not found in the current invoice")
-//           }
-//       } catch {
-//        }
-//   }
-   
-//   private func updateInvoiceTotals(invoice: Invoice, context: NSManagedObjectContext) {
-//       let fetchRequest: NSFetchRequest<CartProductEntity> = CartProductEntity.fetchRequest()
-//       fetchRequest.predicate = NSPredicate(format: "invoice.id == %@", invoice.id!)
-//       
-//       do {
-//           let products = try context.fetch(fetchRequest)
-//           
-//           var totalPrice = 0.0
-//           var totalQuantity = 0
-//           
-//           for product in products {
-//               totalPrice += (product.price ) * Double(product.quntity)
-//               totalQuantity += Int(product.quntity)
-//           }
-//           
-//           invoice.totalPrice = totalPrice
-//           invoice.totalQuantity = Int32(totalQuantity)
-//           
-//           print("invoice.totalPriceinvoice.totalPrice")
-//           print(invoice.totalPrice)
-//           print("invoice.totalQuantitytotalQuantitytotalQuantity")
-//           print(invoice.totalQuantity)
-//           
-//           print(invoice.products)
-//           
-//       } catch {
-//        }
-//   }
- 

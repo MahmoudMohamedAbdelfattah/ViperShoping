@@ -11,20 +11,16 @@ import UIKit
  protocol LockViewProtocol :AnyObject {
  // MARK: - Variables
         var presenter : LockPresenterProtocol? {get}
- // MARK: - Functions
-   }
+    }
    protocol LockPresenterProtocol : AnyObject {
   // MARK: - Variables
          var view : LockViewProtocol? {get set}
          var wireframe : LockWireFrameProtocol? {get set}
          var interactor : LockInteractorInputProtocol?{get set}
-     
- // MARK: - Functions
+  // MARK: - Functions
          func viewDidLoad()
          func routViewController()
-
- 
-  }
+   }
     protocol LockInteractorInputProtocol : AnyObject {
 // MARK: - Variables
         var outPut: LockInteractorOutputProtocol? { get set }

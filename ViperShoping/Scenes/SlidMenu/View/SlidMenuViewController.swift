@@ -4,26 +4,9 @@
 //
 //  Created by Mahmoud on 22/08/2023.
 //
-
-//"data": {
-//       "id": 58119,
-//       "name": "camba",
-//       "email": "qqaazz@gmail.com",
-//       "phone": "0011002233",
-//       "image": "https://student.valuxapps.com/storage/assets/defaults/user.jpg",
-//       "points": 0,
-//       "credit": 0,
-//       "token": "eaHAWCsDitBu5Hb1b2VMJhXz284F66DlnGKwdjPij8G6TXQlqJeGVYFmeNYnJeUGJgbssp"
-//   }
-//}
-
-//         "user_id": 58119,
-//         "id": 979
-
-
+ 
 import UIKit
-
-class SlidMenuViewController: UIViewController , SlidMenuViewProtocol {
+ class SlidMenuViewController: UIViewController , SlidMenuViewProtocol {
  
 // MARK: - IBOutlets
     @IBOutlet var allStack: [UIStackView]!
@@ -123,9 +106,9 @@ class SlidMenuViewController: UIViewController , SlidMenuViewProtocol {
     @IBAction func cartProduct(_ sender: Any) {
         presenter?.routeToView(view: CartProductWireFrame.assembleModule())
     }
+     
     @IBAction func termsButton(_ sender: Any) {
         presenter?.routeToView(view: TermsWireFram.assembleModule())
-
     }
     
 }

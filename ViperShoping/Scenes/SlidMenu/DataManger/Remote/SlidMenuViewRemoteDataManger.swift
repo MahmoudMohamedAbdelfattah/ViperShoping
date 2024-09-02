@@ -9,15 +9,13 @@ import Foundation
 
 
 class SlidMenuRemoteDataManager: SlidMenuViewRemoteDataManagerInputProtocol{
-    
-
+ 
 // MARK: - Properties
     var remoteRequestHandler: SlidMenuViewRemoteDataManagerOutputProtocol?
 
 // MARK: - Methods
     func postInfoRequest(token: String) {
-        
-        NetworkManager.shared.fetchData(T: .profile(Content_Type: "application/json", lang: "ar", Authorization: token ), showIndectore: true, responseClass: InformationPersonal.self) { data, error in
+         NetworkManager.shared.fetchData(T: .profile(Content_Type:  NetworkManager.shared.contentType , lang: LanguageHandler.currentLanguage().rawValue , Authorization: token ), showIndectore: true, responseClass: InformationPersonal.self) { data, error in
              if data?.status == true {
                 self.remoteRequestHandler?.signInSucess(data: data ?? InformationPersonal())
              

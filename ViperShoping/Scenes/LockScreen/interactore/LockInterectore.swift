@@ -29,25 +29,17 @@ class LockInteractor : LockInteractorInputProtocol {
              context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
                  DispatchQueue.main.async {
                      if success {
-                         // التحقق نجح
-                         print("تم التحقق بنجاح!")
-                         
                          self.outPut?.popView()
-            
                      } else {
-                         // التحقق فشل
-                         print("فشل التحقق: \(authenticationError?.localizedDescription ?? "لم يتم تحديد السبب")")
-                         // يمكنك معالجة الأخطاء هنا، مثل إعلام المستخدم أو السماح بمحاولة أخرى
-                         print("ffffffffffffffffff")
-                    //     self.getData()
+                          print("فشل التحقق: \(authenticationError?.localizedDescription ?? "لم يتم تحديد السبب")")
+       
                      }
                  }
              }
          } else {
              // لا يدعم الجهاز Face ID أو Touch ID
              print("الجهاز لا يدعم Face ID أو Touch ID")
-             print("bbbbbbbbbbb")
-
+ 
           }
      }
     

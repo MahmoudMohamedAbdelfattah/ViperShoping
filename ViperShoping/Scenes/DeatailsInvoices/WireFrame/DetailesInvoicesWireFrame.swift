@@ -33,12 +33,11 @@ class DetailsInvoiceWireFrame : DetailsInvoiceWireFrameProtocol  {
         return view
     }
     
-    func dismissView() {
-        viewController?.dismiss(animated: true)
+        func dismissView() {
+            viewController?.dismiss(animated: true)
         }
     
-    func pushToHome() {
-         viewController?.dismiss(animated: true)
-    }
-    
-}
+        func pushToHome() {
+            viewController?.dismiss(animated: true)
+        }
+ }

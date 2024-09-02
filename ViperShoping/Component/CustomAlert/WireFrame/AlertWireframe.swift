@@ -21,7 +21,7 @@ class AlertWireFrame : AlertWireFrameProtocol{
         let view : AlertViewController = AlertViewController.loadFromNib()
         let router = AlertWireFrame()
         let interactor = AlertInteractor(data: messageError)
-        let presenter = AlertPresenter(view: view, router: router, interactor: interactor)
+        let presenter = AlertPresenter()
         view.presenter = presenter
         presenter.view = view
         presenter.router = router

@@ -14,8 +14,7 @@ import CoreData
         // MARK: - Functions
                func totalQuntityAndPrice(totalQuntity:Int?,totalPrice:Double?)
                func reloadView()
-               func hideLoadingAndShowErrorMessage(error:String)
-        }
+         }
      protocol CategoryDeatailsPresenterProtocol : AnyObject{
        // MARK: - Variables
                var view : CategoryDetailsViewProtocol? {get set}
@@ -28,18 +27,15 @@ import CoreData
       // MARK: - Functions
                func routDataById(id:Int)
                func searchProduct(text:String?)
-               func routeHideIndicatorAndShowAlert(eroorMessage:String)
-               func saveProduct(data:   CategoryDataDetials,kind:CoreDataManager.entityNameCoreData)
+                func saveProduct(data:   CategoryDataDetials,kind:CoreDataManager.entityNameCoreData)
                 func saveInvoiceCoreData(product: CategoryDataDetials, context: NSManagedObjectContext)
                 func deletIdProductFromInvoice(productID: Int64, context: NSManagedObjectContext)
                 func PostupdateProductQuantityFromInvoice(productID: Int64, newQuantity: Int, context: NSManagedObjectContext)
                func favoriteIdCoreData()
-              // func productCartCoreData()
-               func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)
+                func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)
                func routeToCartScreen()
                func postClearCurrentInvoice()
-               
-        }
+         }
 
     protocol CategoryDetailsInteractorInputProtocol : AnyObject {
         // MARK: - Variables
@@ -51,10 +47,9 @@ import CoreData
             func searchProduct(text:String)
             func getIdFavorite()
             func postSaveProductCoreData(data: CategoryDataDetials,type:CoreDataManager.entityNameCoreData )
-         //   func getProductCart()
             func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)
             func postSaveInvoiceCoreData(product: CategoryDataDetials, context: NSManagedObjectContext)
-           func getOrCreateInvoice(context:NSManagedObjectContext)
+            func getOrCreateInvoice(context:NSManagedObjectContext)
             func PostdeletIdProductFromInvoice(productID: Int64, context: NSManagedObjectContext)
             func updateProductQuantityFromInvoice(productID: Int64, newQuantity: Int, context: NSManagedObjectContext)
             func clearCurrentInvoice()
@@ -78,30 +73,28 @@ import CoreData
         }
 
     protocol  CategoryDetailsViewLocaleDataManagerInputProtocol: AnyObject{
-     // MARK: - Functions
-                var localRequestHandler:  CategoryDetailsViewLocaleDataManagerOutputProtocol? { get set }
+        // MARK: - Variables
+                 var localRequestHandler:  CategoryDetailsViewLocaleDataManagerOutputProtocol? { get set }
                 var currentInvoiceID: String?{get set}
                 var  currentInvoiceIDKey : String?{get set}
         
+        // MARK: - Functions
                 func favoriteIdCoreData()
-              //  func getDataCart()
                 func SaveInvoiceCoreData(product: CategoryDataDetials, context: NSManagedObjectContext)
                 func PostgetOrCreateInvoice(context: NSManagedObjectContext) -> Invoice
                 func PostfetchInvoice(byID id: String, context: NSManagedObjectContext) -> Invoice?
                 func deletIdProductFromInvoiceCoreData(productID: Int64, context: NSManagedObjectContext)
                 func updateProductQuantityFromInvoice(productID: Int64, newQuantity: Int, context: NSManagedObjectContext)
                 func clearCurrentInvoice()
-                
-        
         }
 
 protocol  CategoryDetailsViewLocaleDataManagerOutputProtocol: AnyObject{
-    // MARK: - Functions
-    func favoriteId(id:[Int]?)
-    func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)
-    func SuccessfullyCartProduct(data: [CategoryDataDetials])
-    func updateInvoiceTotal(context: NSManagedObjectContext)
-    func deleteCurrentInvoice(context: NSManagedObjectContext)
+                // MARK: - Functions
+                func favoriteId(id:[Int]?)
+                func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)
+                func SuccessfullyCartProduct(data: [CategoryDataDetials])
+                func updateInvoiceTotal(context: NSManagedObjectContext)
+                func deleteCurrentInvoice(context: NSManagedObjectContext)
     
 }
  
@@ -124,11 +117,10 @@ protocol  CategoryDetailsViewLocaleDataManagerOutputProtocol: AnyObject{
         // MARK: - Functions
                 static func assembleModule(id:Int) -> UIViewController
                 func presentToCart()
-                func alerError(error:String)
-                func HideIndicatorAndShowAlertError(messageErore: String)
         }
 
     protocol ProductTableViewDelgate: AnyObject {
+        // MARK: - Functions
             func reloadFavoriteCell(cell: UITableViewCell , isFavorite: Bool?, model :CategoryDataDetials? )
             func reloadCartCell(cell: UITableViewCell,isCart: Bool?, model:CategoryDataDetials? )
             func reloadCartQuntityCell(cell: UITableViewCell,quantity:Int? ,model:CategoryDataDetials?)
