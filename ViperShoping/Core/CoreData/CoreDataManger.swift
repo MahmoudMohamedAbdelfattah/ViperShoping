@@ -23,8 +23,7 @@ class CoreDataManager {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
 
-        // محاولة العثور على فاتورة موجودة بالفعل
-        let fetchRequest: NSFetchRequest<Invoice> = Invoice.fetchRequest()
+         let fetchRequest: NSFetchRequest<Invoice> = Invoice.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", id)
 
         let invoice: Invoice
@@ -33,8 +32,7 @@ class CoreDataManager {
             if let existingInvoice = fetchedInvoices.first {
                 invoice = existingInvoice
             } else {
-                // إنشاء فاتورة جديدة إذا لم تكن موجودة
-                invoice = NSEntityDescription.insertNewObject(forEntityName: "Invoice", into: context) as! Invoice
+                 invoice = NSEntityDescription.insertNewObject(forEntityName: "Invoice", into: context) as! Invoice
                 invoice.id = id
                 invoice.date = date
                 invoice.totalPrice = 0
@@ -48,20 +46,17 @@ class CoreDataManager {
         var totalPrice = invoice.totalPrice
         var totalQuantity = invoice.totalQuantity
 
-        // إضافة أو تحديث المنتجات في الفاتورة
-        for productData in products {
+         for productData in products {
             let product = NSEntityDescription.insertNewObject(forEntityName: "CartProductEntity", into: context) as! CartProductEntity
             product.id = Int64(Date().timeIntervalSince1970) // استخدام توقيت الوقت كمعرف
             product.name = productData.name
             product.price = productData.price ?? 0.0
             product.quntity = Int64(productData.quantity ?? 0)
             
-            // حساب الإجماليات
-            totalPrice += (productData.price ?? 0.0) * Double(productData.quantity ?? 0)
+             totalPrice += (productData.price ?? 0.0) * Double(productData.quantity ?? 0)
             totalQuantity += Int32(productData.quantity ?? 0)
             
-            // ربط المنتج بالفاتورة
-            product.invoice = invoice
+             product.invoice = invoice
         }
 
         invoice.totalPrice = totalPrice
@@ -69,14 +64,10 @@ class CoreDataManager {
         
         print("Invoice Details: \(invoice)")
 
-        // حفظ السياق
-        do {
+         do {
             try context.save()
             print("Invoice saved or updated successfully")
-            // مسح المنتجات المحددة بعد الحفظ (إذا لزم الأمر)
-            // selectedProducts.removeAll()
-            // تحديث واجهة المستخدم (إذا لزم الأمر)
-            // tableView.reloadData()
+ 
         } catch {
             print("Failed to save or update invoice: \(error)")
         }
@@ -94,8 +85,7 @@ class CoreDataManager {
           let invoice = NSEntityDescription.insertNewObject(forEntityName: "Invoice", into: context) as! Invoice
           invoice.id = id
           invoice.date = date
-//          invoice.totalPrice = 0
-//          invoice.totalQuantity = 0
+ 
         print("invoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceId]")
           // إضافة المنتجات إلى الفاتورة
           var totalPrice = 0.0
@@ -117,10 +107,7 @@ class CoreDataManager {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CartProductEntity")
         do {
             let result = try context.fetch(fetchRequest) as! [NSManagedObject]
-            //  _ = result.map{
-            //                  let productquntity = $0.value(forKey: "quntity")
-            //                let productquntityy = $1.value(forKey: "quntity")
-            //    cartProduct.quntity = productquntity as? Int
+    
             let totalQuantity = result.reduce(0) { $0 + ($1.value(forKey: "quntity") as? Int16 ?? 0) }
             let totalPrice = result.reduce(0) { $0 + ($1.value(forKey: "price") as? Double ?? 0)}
                 invoice.totalPrice = totalPrice
@@ -135,17 +122,11 @@ class CoreDataManager {
          
         } catch{}
          
-//            try context.save()
-//        } catch {}
-//        print("invoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoiceinvoice")
-//
-//        print(invoice)
-          // حفظ السياق
+ 
           do {
               try context.save()
               print("Invoice saved successfully")
-          //    selectedProducts.removeAll() // مسح المنتجات المحددة بعد الحفظ
-         //     tableView.reloadData() // تحديث واجهة المستخدم
+ 
           } catch {
               print("Failed to save invoice: \(error)")
           }
@@ -183,12 +164,7 @@ class CoreDataManager {
                 totalQuantity += quantity
             }
         }
-        
-        // Update the invoice with new totals
-//        if let index = invoices.firstIndex(where: { $0.id == invoiceId }) {
-//            invoices[index].totalPrice = totalPrice
-//            invoices[index].totalQuantity = Int32(Int64(totalQuantity))
-//        }
+ 
     }
 
     
@@ -281,28 +257,7 @@ func updata (id : Int , quntity: Int) {
 
     } catch {}
 }
-    
-//    func saveProductCart(products: CategoryDataDetials) {
-//        guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else {return}
-//         let manageContext = appdelegate.persistentContainer.viewContext
-//         guard let newProduct = NSEntityDescription.insertNewObject(forEntityName: "CartProductEntity", into: manageContext) as? CartProductEntity else {return}
-//       // var pp :[CategoryDataDetials] = []
-//            newProduct.name = products.name
-//            newProduct.image = products.image
-//            newProduct.price = products.price ?? 0.0
-//            newProduct.discount = Int16(products.discount ?? 0)
-//            newProduct.id = Int64(products.id ?? 0)
-//            newProduct.quntity = Int64(products.quntity ?? 0)
-//        print("coreData")
-//        print( newProduct.quntity )
-//     
-//          do {
-//            try manageContext.save()
-// 
-//        } catch {
-//            print("Error saving: \(error)")
-//        }
-//    }
+ 
     func fetchProductDataID()->[Int] {
         guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else{return[]}
         var productId : [Int] =  []
