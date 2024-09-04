@@ -6,9 +6,7 @@
 //
 
 import Foundation
-
-
-import UIKit
+ import UIKit
 
 protocol UpdateAddressViewProtocol :AnyObject {
     
@@ -26,28 +24,24 @@ protocol UpdateAddressViewProtocol :AnyObject {
       // MARK: - Functions
         func PostdidLoadData()
         func dismissView()
-      
-    }
+     }
 
    protocol UpdateAddressInteractorInputProtocol : AnyObject {
        // MARK: - Variables
        var outPut: UpdateAddressInteractorOutputProtocol? { get set }
        // MARK: - Functions
        func didLoadData()
-       
- 
-   }
+    }
 
   protocol UpdateAddressInteractorOutputProtocol: AnyObject {
       // MARK: - Functions
        func didSignInSucess(data : getAddress)
-    
-  }
+   }
 
    protocol UpdateAddressWireFrameProtocol: AnyObject {
        // MARK: - Variables
        var viewController : UIViewController?{get set}
        // MARK: - Functions
        static func assembleModule() -> UIViewController
-        func dismiss()
+       func dismiss()
    }

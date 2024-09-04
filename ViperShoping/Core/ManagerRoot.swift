@@ -2,15 +2,13 @@
 //  ManagerRoot.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 21/06/2023.
+//  Created by Mahmoud on 30/06/2024.
 //
 
 import UIKit
 
 class RootManager  {
-    
-    
-    
+ 
   static  func rootViewController(for window: UIWindow, with scene: UIScene? = nil, rootViewController: UIViewController) {
         let windowScene: UIWindowScene
         
@@ -22,8 +20,7 @@ class RootManager  {
             fatalError("Unable to find a UIWindowScene.")
         }
        
-      
-         let navigationController = UINavigationController(rootViewController: rootViewController)
+        let navigationController = UINavigationController(rootViewController: rootViewController)
         navigationController.isNavigationBarHidden = true
         window.windowScene = windowScene
         window.rootViewController = navigationController
@@ -42,12 +39,10 @@ class RootManager  {
                 .compactMap({ $0 })
                 .first?.windows
                 .filter({ $0.isKeyWindow }).first
-            
-         //   presentRootScreen(in: window, vc: ProductRouter.assembleModule())
-        }
+          }
     
 }
 
 
 
-// MahmoudMohamedAbdelfattah
+ 

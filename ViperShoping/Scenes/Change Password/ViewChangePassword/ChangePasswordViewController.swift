@@ -2,7 +2,7 @@
 //  ChangePasswordViewController.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 12/09/2023.
+//  Created by Mahmoud on 12/09/2024.
 //
 
 import UIKit
@@ -54,8 +54,7 @@ class ChangePasswordViewController: UIViewController , ChangePasswordViewProtoco
          }
     }
     // MARK: - @IBAction
-
-    @IBAction func changePassword(_ sender: Any) {
+     @IBAction func changePassword(_ sender: Any) {
         presenter?.postChangePassword(current_password: currentPasswordTxt.text ?? "", new_password: newPasswordTxt.text ?? "", Content_Type: NetworkManager.shared.contentType, lang: LanguageHandler.currentLanguage().rawValue, Authorization: Component.shared.getApiToken() ?? "")
     }
     

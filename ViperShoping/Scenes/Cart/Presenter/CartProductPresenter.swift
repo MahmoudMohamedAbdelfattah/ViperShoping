@@ -2,14 +2,12 @@
 //  CartProductPresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 02/10/2023.
+//  Created by Mahmoud on 02/10/2024.
 //
-
-
+ 
 import UIKit
 import CoreData
- 
-class CartProductPresenter : CartPresenterProtocol{
+ class CartProductPresenter : CartPresenterProtocol{
   
     // MARK: - IBOutlets
     weak var view: CartProductViewProtocol?

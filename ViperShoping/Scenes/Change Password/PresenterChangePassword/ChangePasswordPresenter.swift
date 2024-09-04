@@ -2,16 +2,13 @@
 //  ChangePasswordPresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 25/09/2023.
+//  Created by Mahmoud on 25/09/2024.
 //
 
 import Foundation
-
-
-
+ 
 class ChangePasswordPresenter : ChangePasswordPresenterProtocol{
-    
-    // MARK: - Variables
+     // MARK: - Variables
     weak var view: ChangePasswordViewProtocol?
     var wireframe: ChangePasswordWireFrameProtocol?
     var interactor: ChangePasswordInteractorInputProtocol?

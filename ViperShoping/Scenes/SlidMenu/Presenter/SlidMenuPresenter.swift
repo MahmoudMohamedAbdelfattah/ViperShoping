@@ -2,7 +2,7 @@
 //  SlidMenuPresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 10/09/2023.
+//  Created by Mahmoud on 10/09/2024.
 //
 
 import UIKit
@@ -36,8 +36,6 @@ extension SlidMenuPresenter :SlidMenuInteractorOutputProtocol  {
         self.personalInformation = data.data
  
         view?.updateProfileImage(image: self.personalInformation?.image ?? "", name: self.personalInformation?.name ?? "" )
-        
-     //   view?.updateProfileImage(image: self.personalInformation?.image ?? "", name: self.personalInformation?.name ?? "")
     }
         func onError(message: String) {
          }

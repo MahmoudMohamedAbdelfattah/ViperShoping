@@ -2,7 +2,7 @@
 //  CategoryInteractor.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 21/07/2023.
+//  Created by Mahmoud on 21/07/2024.
 //
 
 import CoreData
@@ -10,7 +10,6 @@ import UIKit
 
 class CategoryDeatailsInteractor : CategoryDetailsInteractorInputProtocol {
    
-
     // MARK: - Variables
         var outPut: CategoryDeatailsInteractorOutputProtocol?
         var remoteDataManager: CategoryDetailsViewRemoteDataManagerInputProtocol?

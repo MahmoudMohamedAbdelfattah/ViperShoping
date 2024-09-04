@@ -27,6 +27,4 @@ extension DetailesInvoicesViewController : UITableViewDelegate , UITableViewData
            cell.configure(with: presenter?.DetailsInvoice[indexPath.row])
             return cell
         }
-   
- 
 }

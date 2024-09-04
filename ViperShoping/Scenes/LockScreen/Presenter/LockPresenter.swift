@@ -6,8 +6,7 @@
 //
 
 import Foundation
-
-class LockViewPresenter  : LockPresenterProtocol {
+ class LockViewPresenter  : LockPresenterProtocol {
 
 // MARK: - Variables
     weak var view: LockViewProtocol?
@@ -15,9 +14,10 @@ class LockViewPresenter  : LockPresenterProtocol {
     var interactor: LockInteractorInputProtocol?
     
 // MARK: - Functions
-        func viewDidLoad() {
+    func viewDidLoad() {
         interactor?.getData()
     }
+    
     func routViewController() {
         wireframe?.popViewController()
     }

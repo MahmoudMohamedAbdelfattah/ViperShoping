@@ -2,7 +2,7 @@
 //  «عزCategoryPresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 23/09/2023.
+//  Created by Mahmoud on 23/09/2024.
 //
 
 import Foundation
@@ -17,8 +17,7 @@ class SubCategoryPresenter : SubCategoryPresenterProtocol{
        var allProductCategoryDetails: InfoSubCategory?
  
     // MARK: - Methods
-  
-       func routDataById(id:Int) {
+        func routDataById(id:Int) {
             self.interactor?.getData(id:id)
         }
  

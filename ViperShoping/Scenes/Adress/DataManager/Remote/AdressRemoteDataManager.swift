@@ -5,11 +5,8 @@
 //  Created by Mac Book Pro  on 21/8/2024.
 //
 
+  import UIKit
  
-
-import UIKit
-
-
 class AdressRemoteDataManager : AdressRemoteDataManagerInputProtocol {
  
 // MARK: - Variables

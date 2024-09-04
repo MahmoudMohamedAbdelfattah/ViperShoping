@@ -2,7 +2,7 @@
 //  RegisterRouter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 22/06/2023.
+//  Created by Mahmoud on 22/06/2024.
 //
 
 import UIKit
@@ -15,9 +15,7 @@ class SignUpWireFrame : SignUpWireFrameProtocol {
        weak var viewController: UIViewController?
  
  // MARK: - Methods
-       
-     static func assembleModule() -> UIViewController {
-         
+      static func assembleModule() -> UIViewController {
         let view : RegisterViewController = RegisterViewController.loadFromNib()
         view.modalPresentationStyle = .fullScreen
         let interactor = SignUpViewInteractor()

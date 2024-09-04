@@ -2,13 +2,12 @@
 //  ContractAccount.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 25/09/2023.
+//  Created by Mahmoud on 25/09/2024.
 //
 
 import Foundation
 import UIKit
-
-
+ 
 protocol AccountViewProtocol :AnyObject {
 // MARK: - Variables
        var presenter : AccountPresenterProtocol? {get}

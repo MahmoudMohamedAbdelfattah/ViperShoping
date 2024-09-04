@@ -2,15 +2,14 @@
 //  CategoryDetailsRemtoeDataManger.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 09/08/2023.
+//  Created by Mahmoud on 09/08/2024.
 //
 
 import Foundation
 
 class CategoryDetailsRemtoeDataManger : CategoryDetailsViewRemoteDataManagerInputProtocol {
   
- 
-    // MARK: - Properties
+     // MARK: - Properties
     var remoteRequestHandler: CategoryDetailsViewRemoteDataManagerOutputProtocol?
  
     // MARK: - Methods

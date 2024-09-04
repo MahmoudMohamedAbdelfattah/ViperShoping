@@ -31,8 +31,7 @@ class LocationListViewController: UIViewController , LocationViewProtocol {
         super.viewDidLoad()
 
     }
-    
-    
+ 
     func parseAddress(selectedItem:MKPlacemark) -> String {
          let firstSpace = (selectedItem.subThoroughfare != nil && selectedItem.thoroughfare != nil) ? " " : ""
          let comma = (selectedItem.subThoroughfare != nil || selectedItem.thoroughfare != nil) && (selectedItem.subAdministrativeArea != nil || selectedItem.administrativeArea != nil) ? ", " : ""

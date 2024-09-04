@@ -2,12 +2,11 @@
 //  ExtentionCartProductView.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 03/10/2023.
+//  Created by Mahmoud on 03/10/2024.
 //
 
  import UIKit
-
-extension CartProductViewController : UITableViewDelegate , UITableViewDataSource {
+ extension CartProductViewController : UITableViewDelegate , UITableViewDataSource {
     
      // MARK: - Methods
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

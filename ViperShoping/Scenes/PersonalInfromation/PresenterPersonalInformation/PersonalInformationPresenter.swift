@@ -8,13 +8,11 @@
 import Foundation
 
 class PersonalInformationViewPresenter : PersonalInformationPresenterProtocol {
-  
-    // MARK: - Properties
+     // MARK: - Properties
     var view: PersonalInformationViewProtocol?
     var wireframe: PersonalInformationWireFrameProtocol?
     var interactor: PersonalInformationInteractorInputProtocol?
-    
-    // MARK: - Methods
+     // MARK: - Methods
     func PostdidLoadData() {
         interactor?.didLoadData()
     }
@@ -23,8 +21,8 @@ class PersonalInformationViewPresenter : PersonalInformationPresenterProtocol {
         interactor?.PostupdateProfile(name: name, email: email, phone: phone, image: image)
     }
 }
-
-extension PersonalInformationViewPresenter :  PersonalInformationInteractorOutputProtocol {
+ extension PersonalInformationViewPresenter:PersonalInformationInteractorOutputProtocol {
+     // MARK: - Methods
     func updateProfileSuccess() {
         wireframe?.dismiss()
     }

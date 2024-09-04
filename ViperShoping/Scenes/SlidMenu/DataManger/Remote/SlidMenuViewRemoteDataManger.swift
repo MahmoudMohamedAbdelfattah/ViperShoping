@@ -2,12 +2,11 @@
 //  SlidMenuViewRemoteDataManger.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 10/09/2023.
+//  Created by Mahmoud on 10/09/2024.
 //
 
 import Foundation
-
-
+ 
 class SlidMenuRemoteDataManager: SlidMenuViewRemoteDataManagerInputProtocol{
  
 // MARK: - Properties

@@ -2,14 +2,12 @@
 //  ExtentionFavoriteViewController.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 20/08/2023.
+//  Created by Mahmoud on 20/08/2024.
 //
 
 import UIKit
-
-extension FavoriteProductViewController : UITableViewDelegate , UITableViewDataSource {
-    
-    
+ extension FavoriteProductViewController : UITableViewDelegate , UITableViewDataSource {
+ 
     // MARK: - Methods
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
              return presenter?.favoriteProduct?.count ?? 0

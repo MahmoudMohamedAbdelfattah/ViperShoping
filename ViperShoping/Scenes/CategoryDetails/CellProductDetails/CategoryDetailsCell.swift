@@ -2,14 +2,11 @@
 //  CategoryDetailsCell.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 21/07/2023.
+//  Created by Mahmoud on 21/07/2024.
 //
-
-import UIKit
- 
-class CategoryDetailsCell: UITableViewCell{
- 
-    // MARK: - Outlet
+ import UIKit
+  class CategoryDetailsCell: UITableViewCell{
+     // MARK: - Outlet
         @IBOutlet weak var cartView: UIView!
         @IBOutlet weak var favoriteImage: UIImageView!
         @IBOutlet weak var cartImage: UIImageView!

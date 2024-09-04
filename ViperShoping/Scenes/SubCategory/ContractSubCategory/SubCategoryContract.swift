@@ -2,13 +2,12 @@
 //  SubCategoryContract.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 23/09/2023.
+//  Created by Mahmoud on 23/09/2024.
 //
 
 import UIKit
 
-
-protocol SubCategoryViewProtocol :AnyObject {
+ protocol SubCategoryViewProtocol :AnyObject {
    // MARK: - Variables
          var presenter : SubCategoryPresenterProtocol? {get set}
    // MARK: - Functions
@@ -35,8 +34,7 @@ protocol  SubCategoryInteractorInputProtocol : AnyObject {
  
     // MARK: - Functions
            func getData(id : Int)
- 
-}
+ }
 
 protocol  SubCategoryViewRemoteDataManagerInputProtocol: AnyObject{
     // MARK: - Variables

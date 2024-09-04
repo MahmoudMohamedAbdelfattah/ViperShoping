@@ -8,12 +8,9 @@
 import Foundation
 import LocalAuthentication
 import UIKit
-
-
-
-class LockInteractor : LockInteractorInputProtocol {
-
-    
+ 
+ class LockInteractor : LockInteractorInputProtocol {
+ 
       // MARK: - Variables
     var outPut: LockInteractorOutputProtocol?
 
@@ -21,28 +18,21 @@ class LockInteractor : LockInteractorInputProtocol {
      func getData() {
          let context = LAContext()
          var error: NSError?
-
-         if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
-             
-             let reason = "يرجى التحقق باستخدام Face ID أو رمز المرور"
-             
-             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
+          if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+              let reason = "يرجى التحقق باستخدام Face ID أو رمز المرور"
+              context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
                  DispatchQueue.main.async {
                      if success {
                          self.outPut?.popView()
                      } else {
                           print("فشل التحقق: \(authenticationError?.localizedDescription ?? "لم يتم تحديد السبب")")
-       
-                     }
+                      }
                  }
              }
          } else {
-             // لا يدعم الجهاز Face ID أو Touch ID
-             print("الجهاز لا يدعم Face ID أو Touch ID")
- 
-          }
+              print("الجهاز لا يدعم Face ID أو Touch ID")
+           }
      }
-    
-    }
+}
     
  

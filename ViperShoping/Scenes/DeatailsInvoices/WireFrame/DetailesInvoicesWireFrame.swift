@@ -6,19 +6,12 @@
 //
 
 import Foundation
-
-
-import UIKit
-
-
-class DetailsInvoiceWireFrame : DetailsInvoiceWireFrameProtocol  {
- 
-    // MARK: - Variables
+  import UIKit
+  class DetailsInvoiceWireFrame : DetailsInvoiceWireFrameProtocol  {
+     // MARK: - Variables
     var viewController: UIViewController?
-    
     // MARK: - Functions
     static func assembleModule(detailsInvoiceProduct:[CartProductEntity]) -> UIViewController {
-        
         let view : DetailesInvoicesViewController = DetailesInvoicesViewController.loadFromNib()
         let wireframe = DetailsInvoiceWireFrame()
         let interactor = DetailsInvoiceProductInteractor()

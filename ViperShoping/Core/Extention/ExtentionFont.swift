@@ -2,41 +2,16 @@
 //  ExtentionFont.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 03/09/2023.
+//  Created by Mahmoud on 30/06/2024.
 //
 
 import Foundation
 import UIKit
-
-
-//extension UIFont {
-//
-//    static func cairoBold() -> UIFont? {
-//        return UIFont(name: "Cairo-Bold", size: 16)
-//     }
-//
-//    static func cairoMedium() -> UIFont? {
-//        return UIFont(name: "Cairo-Medium", size: 16)
-//     }
-//
-//    static func cairoRegular() -> UIFont? {
-//        return UIFont(name: "Cairo-Regular", size: 16)
-//     }
-//
-//    static func cairoSemiBold() -> UIFont? {
-//        return UIFont(name: "Cairo-SemiBold", size: 16)
-//     }
-//}
-
-
-
+ 
 extension UIFont {
     static func setDefaultFont(size: CGFloat) {
          let fontNameCairoBold = "Cairo-Bold"
-//        let fontName_CairoMedium = "Cairo-Medium"
-//        let fontName_CairoRegular = "Cairo-Regular"
-//        let fontName_CairoSemiBold = "Cairo-SemiBold"
-
+ 
         let font = UIFont(name: fontNameCairoBold, size: size)!
         // Cairo-Light.ttf
         let fontName_CairoBold = UIFont(name: "Cairo-Bold", size: size)!
@@ -59,15 +34,7 @@ extension UIFont {
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
         UITabBar.appearance().backgroundColor = UIColor.black.withAlphaComponent(0.7)
      //   UITabBarItem.appearance().image?.size(setDefaultFont(size:  font))
-        
-    //   UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
-      //  UITabBarItem.appearance().imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
-
-//        DispatchQueue.main.async {
-//            // أعد ضبط الحواف الداخلية لصورة عنصر شريط التبويب
-//            let label = tabBarItem.value(forKey: "view") as? UIView
-//            label?.subviews.first?.imageInsets = UIEdgeInsets(top: 0, left: 0, bottom: -6, right: 0)
-//        }
+ 
 //
         UITextField.appearance().font = fontName_CairoLight
         UITextField.appearance(whenContainedInInstancesOf: [UITableViewCell.self]).font = fontName_CairoLight
@@ -77,9 +44,6 @@ extension UIFont {
         let placeholderAttributes: [NSAttributedString.Key: Any] = [
             .foregroundColor: UIColor.white]
           UITextField.appearance().defaultTextAttributes = placeholderAttributes
-      //  UITextField.appearance().attributedPlaceholder.font =
-      //    UITextField.appearance().attributedPlaceholder = NSAttributedString(
-           // string: "aa", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
  
         UITextField.appearance(whenContainedInInstancesOf: [UIStackView.self]).font = fontName_CairoLight
         UITextField.appearance(whenContainedInInstancesOf: [UIViewController.self]).font = fontName_CairoLight

@@ -2,21 +2,17 @@
 //  CartProductInterectore.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 02/10/2023.
+//  Created by Mahmoud on 02/10/2024.
 //
-
  
 import CoreData
 import UIKit
- 
-class CartProductInteractor: CartInteractorInputProtocol {
+ class CartProductInteractor: CartInteractorInputProtocol {
  
     // MARK: - Variables
         var outPut: CartInteractorOutputProtocol?
-      
-    // MARK: - Functions
-
-    func getData() {
+     // MARK: - Functions
+     func getData() {
         guard let appdelegate = UIApplication.shared.delegate as? AppDelegate else{return}
         let  context = appdelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<Invoice> = Invoice.fetchRequest()

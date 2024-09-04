@@ -2,14 +2,12 @@
 //  AccountPresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 25/09/2023.
+//  Created by Mahmoud on 25/09/2024.
 //
 
 import UIKit
  
 class AccountPresenter : AccountPresenterProtocol{
-  
-    
  
      // MARK: - Variables
     weak var view: AccountViewProtocol?

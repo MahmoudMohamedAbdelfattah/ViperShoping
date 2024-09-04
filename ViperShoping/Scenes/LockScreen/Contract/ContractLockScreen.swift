@@ -5,13 +5,12 @@
 //  Created by Mac Book Pro  on 28/7/2024.
 //
  
-
-import UIKit
-
- protocol LockViewProtocol :AnyObject {
+ import UIKit
+  protocol LockViewProtocol :AnyObject {
  // MARK: - Variables
         var presenter : LockPresenterProtocol? {get}
     }
+
    protocol LockPresenterProtocol : AnyObject {
   // MARK: - Variables
          var view : LockViewProtocol? {get set}
@@ -21,6 +20,7 @@ import UIKit
          func viewDidLoad()
          func routViewController()
    }
+
     protocol LockInteractorInputProtocol : AnyObject {
 // MARK: - Variables
         var outPut: LockInteractorOutputProtocol? { get set }
@@ -37,5 +37,4 @@ import UIKit
 // MARK: - Functions
         static func assembleModule() -> UIViewController
         func popViewController()
- 
-}
+ }

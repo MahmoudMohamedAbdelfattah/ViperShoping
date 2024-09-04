@@ -8,17 +8,17 @@
 import Foundation
 
 import UIKit
-
-     protocol LocationViewProtocol :AnyObject {
+ 
+protocol LocationViewProtocol :AnyObject {
           // MARK: - Variables
          var presenter : LocationPresenterProtocol? {get}
      }
-     protocol LocationPresenterProtocol : AnyObject{
+protocol LocationPresenterProtocol : AnyObject{
          // MARK: - Variables
          var view : LocationViewProtocol? {get set}
          var wireframe : LocationWireFrameProtocol? {get set}
      }
-     protocol LocationWireFrameProtocol: AnyObject {
+protocol LocationWireFrameProtocol: AnyObject {
  // MARK: - Variables
          var viewController : UIViewController?{get set}
  // MARK: - Functions

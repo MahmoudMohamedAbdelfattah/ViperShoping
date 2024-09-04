@@ -9,8 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
-
+ 
 protocol LocationDelegate : AnyObject {
     func userLocationUpdated(location: CLLocation)
  
@@ -61,29 +60,10 @@ class LocationManger : NSObject , CLLocationManagerDelegate , MKMapViewDelegate{
         return CLLocation(latitude: lat, longitude: long)
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        locationManager.stopUpdatingLocation()
-//
-//        currentLocation = manager.location?.coordinate
-//        if userLocationDelegate != nil {
-//            userLocationDelegate?.userLocationUpdated(location: locations.first ?? CLLocation())
-//        }
-//    }
-    
-    
-//    func checkLocationStatus(){
-//        if LocationServices.shared.locationManager.authorizationStatus == .authorizedWhenInUse {
-// 
-//        } else {
-//            LocationServices.shared.locationManager.requestWhenInUseAuthorization()
-//        }
-//    }
-    
     func checkAuth(){
             switch CLLocationManager.authorizationStatus() {
             case .authorizedWhenInUse:
-              //  starttrackinguserlocation()
-                break
+                 break
             case .denied:
                 break
             case .notDetermined:

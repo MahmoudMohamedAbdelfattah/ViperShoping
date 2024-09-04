@@ -5,17 +5,12 @@
 //  Created by Mac Book Pro  on 14/7/2024.
 //
 
- 
-import UIKit
+ import UIKit
 import Foundation
-
-class LocationWireFrame : LocationWireFrameProtocol {
-
-    
-// MARK: - Variables
+ class LocationWireFrame : LocationWireFrameProtocol {
+ // MARK: - Variables
         var viewController: UIViewController?
-    
-// MARK: - Functions
+ // MARK: - Functions
     static func assembleModule() -> UIViewController {
         let view : LocationListViewController = LocationListViewController.loadFromNib()
             let wireframe = LocationWireFrame()

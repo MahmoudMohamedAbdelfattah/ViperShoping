@@ -2,12 +2,11 @@
 //  CategoryDeatailsWireFrame.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 20/07/2023.
+//  Created by Mahmoud on 20/07/2024.
 //
  
 import UIKit
-
-
+ 
 class CategoryDeatailsWireFrame : CategoryDetailsWireFrameProtocol  {
  
     // MARK: - Variables
@@ -21,7 +20,6 @@ class CategoryDeatailsWireFrame : CategoryDetailsWireFrameProtocol  {
         let dataMangerRemote = CategoryDetailsRemtoeDataManger()
         let dataMangerLocal = CategoryDetailsLocaleDataManger()
         let presenter = CategoryDetailsPresenter()
-        
         view.presenter = presenter
         presenter.view = view
         presenter.interactor = interactor
@@ -33,7 +31,6 @@ class CategoryDeatailsWireFrame : CategoryDetailsWireFrameProtocol  {
         dataMangerLocal.localRequestHandler = interactor
          presenter.routDataById(id: id)
         wireframe.viewController = view
-        
         return view
     }
 

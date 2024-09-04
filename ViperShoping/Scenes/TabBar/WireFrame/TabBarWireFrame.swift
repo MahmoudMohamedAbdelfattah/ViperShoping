@@ -2,22 +2,17 @@
 //  TabBarRouter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 19/07/2023.
-//
-
-import Foundation
-
-
+//  Created by Mahmoud on 19/07/2024.
+ 
+ 
 import UIKit
 import Foundation
 
 class TabBarWireFrame : TabBarWireFrameProtocol {
  
-    
-// MARK: - Variables
+ // MARK: - Variables
      var viewController: UIViewController?
-    
-// MARK: - Functions
+ // MARK: - Functions
      static func assembleModule() -> UIViewController {
        
          let Home = "Home".localized

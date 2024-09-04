@@ -2,7 +2,7 @@
 //  TabBarViewController.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 19/07/2023.
+//  Created by Mahmoud on 19/07/2024.
 //
 
 import UIKit
@@ -18,14 +18,12 @@ class TabBarViewController: UITabBarController , TabBarViewProtocol {
 // MARK: - Methods
      override func viewDidLoad() {
         super.viewDidLoad()
-         
-            tabBarLayer()
+             tabBarLayer()
        }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     func tabBarLayer() {

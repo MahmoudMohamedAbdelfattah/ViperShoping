@@ -21,10 +21,7 @@ extension  LocationListViewController : UITableViewDelegate , UITableViewDataSou
         cell.placeDeatial?.text = parseAddress(selectedItem: selectedItem)
         return cell
     }
-    
-    
-    
-}
+ }
 extension LocationListViewController {
 
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -33,8 +30,7 @@ extension LocationListViewController {
          dismiss(animated: true, completion: nil)
     }
 }
-
-
+ 
 extension LocationListViewController : UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
@@ -57,6 +53,5 @@ extension LocationListViewController : UISearchResultsUpdating {
     
     func updateSearchResultsForSearchController(searchController: UISearchController) {
         print(searchController.searchBar.text ?? "")
-
-    }
+     }
 }

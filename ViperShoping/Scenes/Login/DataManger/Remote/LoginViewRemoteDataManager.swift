@@ -2,12 +2,11 @@
 //  LoginViewRemoteDataManager.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 30/07/2023.
+//  Created by Mahmoud on 30/07/2024.
 //
 
 import Foundation
-
-
+ 
 class LoginViewRemoteDataManager: LoginViewRemoteDataManagerInputProtocol{
 
 // MARK: - Properties

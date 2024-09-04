@@ -6,10 +6,8 @@
 //
 
 import UIKit
-
-class TermsViewController: UIViewController , TermsViewProtocol {
-    
-    
+ class TermsViewController: UIViewController , TermsViewProtocol {
+ 
     // MARK: - IBOutlets
     @IBOutlet weak var imageLogo: UIImageView!
     @IBOutlet weak var termsTxt: UITextView!

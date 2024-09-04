@@ -2,13 +2,12 @@
 //  HomePresenter.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 08/07/2023.
+//  Created by Mahmoud on 08/07/2024.
 //
 
 import UIKit
 
-
-class HomePresenter : HomePresenterProtocol{
+ class HomePresenter : HomePresenterProtocol{
     
     // MARK: - Variables
     weak var view: HomeViewProtocol?

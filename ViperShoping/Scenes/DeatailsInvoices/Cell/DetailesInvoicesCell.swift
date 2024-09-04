@@ -19,17 +19,15 @@ class DetailesInvoicesCell: UITableViewCell {
     // MARK: - Methods
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
-
-    func configure(with model: CartProductEntity?) {
+     func configure(with model: CartProductEntity?) {
         var quantity = model?.quntity ?? 0
         var price = model?.price ?? 0.0
         var totalePrice = Double(quantity) * price

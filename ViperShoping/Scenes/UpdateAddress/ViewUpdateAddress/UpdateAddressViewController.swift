@@ -10,8 +10,7 @@ import SceneKit
 
 class UpdateAddressViewController: UIViewController , UpdateAddressViewProtocol {
     
-    
-    // MARK: - IBOutlets
+     // MARK: - IBOutlets
     @IBOutlet weak var mainStackView: UIView!
     @IBOutlet var allStsck: [UIStackView]!
     @IBOutlet weak var nameGoverment: UILabel!
@@ -73,8 +72,7 @@ class UpdateAddressViewController: UIViewController , UpdateAddressViewProtocol 
         scene = SCNScene()
         scnView.scene = scene
         scnView.autoenablesDefaultLighting = true
-      //  scnView.allowsCameraControl = true
-    }
+     }
 
     private func setupCamera() {
         let camera = SCNCamera()
@@ -82,8 +80,7 @@ class UpdateAddressViewController: UIViewController , UpdateAddressViewProtocol 
         cameraNode.camera = camera
         cameraNode.position = SCNVector3(x: 0, y: 0, z: 8) // Adjust this value if needed
         scene.rootNode.addChildNode(cameraNode)
-        
-    }
+     }
 
     private func setupEarth() {
         let earthGeometry = SCNSphere(radius: 1.0) // Adjust radius if needed
@@ -115,11 +112,6 @@ class UpdateAddressViewController: UIViewController , UpdateAddressViewProtocol 
     }
  
     func data(name: String, city: String, region: String, details: String) {
-        
-        print(name)
-        print(city)
-        print(region)
-        print(details)
         self.nameCity.text = region
         self.nameCountry.text = name
         self.nameGoverment.text = city

@@ -2,14 +2,12 @@
 //  CoreDataManger.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 22/08/2023.
+//  Created by Mahmoud on 22/08/2024.
 //
  
 import UIKit
 import CoreData
-
-
-
+ 
 class CoreDataManager {
     
     // MARK: - Variables
@@ -72,9 +70,7 @@ class CoreDataManager {
             print("Failed to save or update invoice: \(error)")
         }
     }
-
  
-////
     func saveInvoice(id: String, date: String, products: CategoryDataDetials) {
         print("invoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceIdinvoiceId")
         print(id)
@@ -131,9 +127,7 @@ class CoreDataManager {
               print("Failed to save invoice: \(error)")
           }
       }
-
-    
-    
+ 
     // New 2
     var products: [CategoryDataDetials] = []
   //  var invoices: [Invoices] = []
@@ -166,11 +160,7 @@ class CoreDataManager {
         }
  
     }
-
-    
-    
-    /////
-    
+ 
     enum entityNameCoreData : String {
      
          case cart , favorite
@@ -195,10 +185,7 @@ class CoreDataManager {
           let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CartProductEntity")
           do {
               let result = try Context.fetch(fetchRequest) as! [NSManagedObject]
-            //  _ = result.map{
-  //                  let productquntity = $0.value(forKey: "quntity")
-  //                let productquntityy = $1.value(forKey: "quntity")
-               //    cartProduct.quntity = productquntity as? Int
+
                     let sumQuntity = result.reduce(0) { $0 + ($1.value(forKey: "quntity") as? Int16 ?? 0) }
                     let sumPrice = result.reduce(0) { $0 + ($1.value(forKey: "price") as? Double ?? 0) }
 

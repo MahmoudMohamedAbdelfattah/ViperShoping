@@ -2,7 +2,7 @@
 //  ExtentionCategoryDetails.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 21/07/2023.
+//  Created by Mahmoud on 21/07/2024.
 //
 
 import UIKit
@@ -11,15 +11,13 @@ import CoreData
 extension CategoryDetailsViewController : UITableViewDelegate , UITableViewDataSource {
     
     // MARK: - Methods
-
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
           if isSearch  {
               return presenter?.searchProduct?.count ?? 0
 
             } else {
                 return presenter?.allProductCategoryDetails?.count ?? 0
-
-            }
+             }
      }
     
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,15 +43,13 @@ extension CategoryDetailsViewController : UITableViewDelegate , UITableViewDataS
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        self.present(SubCategoryWireFrame.assembleModule(id: presenter?.allProductCategoryDetails?[indexPath.row].id ?? 0), animated: true)
          }
- 
- }
+  }
 
 
 extension CategoryDetailsViewController :ProductTableViewDelgate  {
  
     // MARK: - Methods
-
-    func reloadCartQuntityCell(cell: UITableViewCell, quantity: Int?, model: CategoryDataDetials?) {
+     func reloadCartQuntityCell(cell: UITableViewCell, quantity: Int?, model: CategoryDataDetials?) {
         guard let index = categoryDetailsTableView.indexPath(for: cell) else {return}
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext

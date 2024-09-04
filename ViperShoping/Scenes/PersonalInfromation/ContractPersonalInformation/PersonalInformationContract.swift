@@ -4,8 +4,7 @@
 //
 //  Created by Mac Book Pro  on 22/8/2024.
 //
-
-
+ 
 import UIKit
 
 protocol PersonalInformationViewProtocol :AnyObject {
@@ -13,7 +12,7 @@ protocol PersonalInformationViewProtocol :AnyObject {
     // MARK: - Variables
        var presenter : PersonalInformationPresenterProtocol? {get}
     // MARK: - Functions
-    func data(name:String,email:String,phone:String,image:String)
+        func data(name:String,email:String,phone:String,image:String)
   }
 
   protocol PersonalInformationPresenterProtocol : AnyObject {
@@ -23,7 +22,7 @@ protocol PersonalInformationViewProtocol :AnyObject {
         var interactor : PersonalInformationInteractorInputProtocol?{get set}
       // MARK: - Functions
         func PostdidLoadData()
-      func updateProfile(name:String,email:String,phone:String,image:String)
+        func updateProfile(name:String,email:String,phone:String,image:String)
     }
 
    protocol PersonalInformationInteractorInputProtocol : AnyObject {
@@ -37,7 +36,7 @@ protocol PersonalInformationViewProtocol :AnyObject {
 
   protocol PersonalInformationInteractorOutputProtocol: AnyObject {
       // MARK: - Functions
-       func didSignInSucess(data : InformationPersonal)
+      func didSignInSucess(data : InformationPersonal)
       func updateProfileSuccess()
       func onError(message: String)
   }

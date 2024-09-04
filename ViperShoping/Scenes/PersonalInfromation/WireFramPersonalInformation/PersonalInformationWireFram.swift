@@ -12,7 +12,7 @@ class PersonalInformationWireFram :  PersonalInformationWireFrameProtocol {
     // MARK: - Properties
     var viewController: UIViewController?
     
-    // MARK: - Properties
+    // MARK: - Function
     static func assembleModule() -> UIViewController {
         let view : PersonalInformationViewController = PersonalInformationViewController.loadFromNib()
         let wireframe = PersonalInformationWireFram()
@@ -22,7 +22,7 @@ class PersonalInformationWireFram :  PersonalInformationWireFrameProtocol {
         presenter.view = view
         presenter.interactor = interactor
         presenter.wireframe = wireframe
-         interactor.outPut = presenter
+        interactor.outPut = presenter
         wireframe.viewController = view
         return view
     }

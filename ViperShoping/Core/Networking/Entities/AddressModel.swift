@@ -2,13 +2,11 @@
 //  AddressModel.swift
 //  ViperShoping
 //
-//  Created by Mac Book Pro  on 21/8/2024.
+//  Created by Mahmoud on 10/07/2024.
 //
 
 import Foundation
-
  
-
 struct AddresModel:Codable{
     var status:Bool?
     var message :String?

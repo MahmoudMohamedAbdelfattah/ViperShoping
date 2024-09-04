@@ -6,10 +6,7 @@
 //
 
 import Foundation
-
-
-
-class TermsViewInteractor: TermsInteractorInputProtocol {
+  class TermsViewInteractor: TermsInteractorInputProtocol {
   
     // MARK: - Variables
     var outPut: TermsInteractorOutputProtocol?

@@ -2,12 +2,11 @@
 //  CartCell.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 03/10/2023.
+//  Created by Mahmoud on 03/10/2024.
 //
 
 import UIKit
-
-class CartCell: UITableViewCell {
+ class CartCell: UITableViewCell {
     
     // MARK: - Variables
     @IBOutlet weak var cartImageProduct: UIImageView!

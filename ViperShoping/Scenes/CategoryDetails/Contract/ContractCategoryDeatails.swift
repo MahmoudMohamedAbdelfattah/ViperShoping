@@ -2,10 +2,8 @@
 //  ContractCategoryDeatails.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 20/07/2023.
+//  Created by Mahmoud on 20/07/2024.
 //
-
- 
 import UIKit
 import CoreData
      protocol CategoryDetailsViewProtocol :AnyObject {
@@ -88,7 +86,7 @@ import CoreData
                 func clearCurrentInvoice()
         }
 
-protocol  CategoryDetailsViewLocaleDataManagerOutputProtocol: AnyObject{
+    protocol  CategoryDetailsViewLocaleDataManagerOutputProtocol: AnyObject{
                 // MARK: - Functions
                 func favoriteId(id:[Int]?)
                 func deleteIdProduct(id:Int,entityName:CoreDataManager.entityNameCoreData)

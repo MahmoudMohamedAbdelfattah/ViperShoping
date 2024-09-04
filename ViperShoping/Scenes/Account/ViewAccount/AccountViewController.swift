@@ -2,7 +2,7 @@
 //  AccountViewController.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 11/09/2023.
+//  Created by Mahmoud on 11/09/2024.
 //
 
 import UIKit
@@ -10,7 +10,6 @@ import UIKit
 class AccountViewController: UIViewController , AccountViewProtocol {
 
     // MARK: - IBOutlets
-    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var allStack: [UIStackView]!
     @IBOutlet weak var imageLogo: UIImageView!

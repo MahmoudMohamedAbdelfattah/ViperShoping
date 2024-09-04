@@ -2,12 +2,11 @@
 //  ExtentionSearchBar.swift
 //  ViperShoping
 //
-//  Created by Mac Book Pro  on 20/7/2024.
+//  Created by Mahmoud on 30/06/2024.
 //
 
 import UIKit
  
-
 extension UISearchBar {
     var textField: UITextField? { return value(forKey: "searchField") as? UITextField }
     var placeholderLabel: UILabel? { return textField?.value(forKey: "placeholderLabel") as? UILabel }

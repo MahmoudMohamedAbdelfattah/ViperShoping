@@ -5,8 +5,7 @@
 //  Created by Mac Book Pro  on 30/7/2024.
 //
 
-
-import UIKit
+ import UIKit
 class LockWireFrame : LockWireFrameProtocol  {
  
 // MARK: - Variables

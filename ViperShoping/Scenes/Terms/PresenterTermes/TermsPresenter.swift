@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
  
 class TermsViewPresenter : TermsPresenterProtocol {
   
@@ -26,8 +25,7 @@ class TermsViewPresenter : TermsPresenterProtocol {
 }
 
 extension TermsViewPresenter :  TermsInteractorOutputProtocol {
-    
-    // MARK: - Methods
+     // MARK: - Methods
     func didSignInSucess(data: Terms) {
         DispatchQueue.main.async {
             self.view?.data(about: data.data?.about ?? "", terms: data.data?.terms ?? "")

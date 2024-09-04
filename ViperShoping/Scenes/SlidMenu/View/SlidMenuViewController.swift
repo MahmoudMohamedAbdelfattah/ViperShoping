@@ -2,7 +2,7 @@
 //  SlidMenuViewController.swift
 //  ViperShoping
 //
-//  Created by Mahmoud on 22/08/2023.
+//  Created by Mahmoud on 22/08/2024.
 //
  
 import UIKit
@@ -24,13 +24,11 @@ import UIKit
     var presenter: SlidMenuPresenterProtocol?
 
     // MARK: - Methods
-
-    override func viewDidLoad() {
+     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.width.constant = 0
-        presenter?.getInfo(token: Component.shared.getApiToken() ?? "" )
-        setupBackgoundStack()
+             self.width.constant = 0
+            presenter?.getInfo(token: Component.shared.getApiToken() ?? "" )
+            setupBackgoundStack()
      }
     
     func setupBackgoundStack() {

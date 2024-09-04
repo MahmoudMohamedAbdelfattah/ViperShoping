@@ -40,7 +40,6 @@ class PersonalInformationViewController: UIViewController , UIImagePickerControl
     
     override func viewDidLayoutSubviews()  {
         super.viewDidLayoutSubviews()
-        
         profileImage.layer.borderWidth = 3
         profileImage.layer.borderColor = UIColor.systemOrange.cgColor
         profileImage.layer.cornerRadius = self.profileImage.frame.size.height/2
@@ -81,8 +80,7 @@ class PersonalInformationViewController: UIViewController , UIImagePickerControl
             imagePicker.sourceType = .photoLibrary
             imagePicker.sourceType = .camera
         }
-        
-        
+ 
         @objc func imageTappedProfile() {
             let title = "choose_image".localized
             let source = "source".localized
@@ -126,11 +124,8 @@ class PersonalInformationViewController: UIViewController , UIImagePickerControl
         }
     
     // MARK: - @IBAction
-
     @IBAction func updateProfile(_ sender: Any) {
-        
         presenter?.updateProfile(name: nameTxt.text ?? "", email: emailTxt.text ?? "", phone: phoneTxt.text ?? "", image: imagebase ?? "" )
     }
-    
-    }
+}
  

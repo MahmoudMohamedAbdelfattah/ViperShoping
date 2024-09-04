@@ -42,11 +42,9 @@ class DetailesInvoicesViewController: UIViewController , DetailsInvoiceProductVi
     }
  
     // MARK: - @IBAction
-
-    @IBAction func dissmisButton(_ sender: Any) {
+     @IBAction func dissmisButton(_ sender: Any) {
         presenter?.routeToDismiss()
-        
-    }
+     }
     
     @IBAction func exiteButton(_ sender: Any) {
         presenter?.routeToHomeScreen()
